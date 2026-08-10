@@ -8,6 +8,7 @@
     grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
     gap: clamp(15px, 2.5vw, 30px);
     align-items: stretch;
+    color: var(--black);
 
     width: 100%;
     max-width: 1400px;
@@ -31,7 +32,7 @@
     box-shadow: 0 8px 25px rgba(0, 0, 0, .12);
 
     text-decoration: none;
-    color: var(--black);
+    color: var(--inkt);
 
     transition:
         transform var(--overgang),
