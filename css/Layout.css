@@ -5,17 +5,21 @@ css
 
 .hero-content {
     width: 100%;
-    max-width: 6500px;
+    max-width: 650px;
     padding-top: 100px;
     color: var(--white);
-}
-
-.hero-content h1 {
     text-align: right;
 }
 
 .hero-content h2 {
     text-align: right;
+}
+
+.hero-buttons {
+    display: flex;
+    justify-content: flex-end;
+    gap: 15px;
+    margin-top: 20px;
 }
 
 .project-content {
