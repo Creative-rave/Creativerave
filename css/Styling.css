@@ -10,6 +10,21 @@
     src: url(../Fonts/Lato/Lato-Regular.ttf) format("truetype");
 }
 
+@font-face {
+    font-family: "Lato-Black";
+    src: url(../Fonts/Lato/Lato-Black.ttf) format("truetype");
+}
+
+@font-face {
+    font-family: "Lato-Bold";
+    src: url(../Fonts/Lato/Lato-Bold.ttf) format("truetype");
+}
+
+@font-face {
+    font-family: "Lato-Light";
+    src: url(../Fonts/Lato/Lato-Light.ttf) format("truetype");
+}
+
 :root {
     --black: #000;
     --white: #fff;
