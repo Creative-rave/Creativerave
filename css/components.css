@@ -96,17 +96,6 @@
     transform: scale(1.05);
 }
 
-.btn-side-right {
-    justify-content: right;
-}
-
-.btn-side-left {
-    justify-content: left;
-}
-
-.btn-side-center {
-    justify-content: center;
-}
 
 /* =========================================================
    SOCIAL MEDIA
