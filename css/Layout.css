@@ -5,12 +5,11 @@ css
 
 .hero-content {
     width: 100%;
-    max-width: 1200px;
+    max-width: 600px;
     padding-top: 100px;
     color: var(--white);
     text-align: right;
 }
-
 
 
 .project-content {
