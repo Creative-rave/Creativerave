@@ -11,6 +11,14 @@ css
     color: var(--white);
 }
 
+.hero-content h1 {
+    text-align: right;
+}
+
+.hero-content h2 {
+    text-align: right;
+}
+
 .project-content {
     width: 100%;
     padding: 10px 0;
