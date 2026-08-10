@@ -1,17 +1,14 @@
-*{
 
-margin:0;
-padding:0;
-box-sizing:border-box;
-
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
 }
-
 
 @font-face {
     font-family: "Lato-Regular";
     src: url(../Fonts/Lato/Lato-Regular.ttf) format("truetype");
 }
-
 
 :root {
     --black: #000;
@@ -22,319 +19,599 @@ box-sizing:border-box;
     --blue: #7d94a2;
     --darkpink: #592f33;
 
---title-H1:clamp(42px,6vw,96px);
-
---title-H2:clamp(28px,4vw,48px);
-
---title-H3:clamp(20px,2.5vw,32px);
-
---title-H4:clamp(18px,2vw,30px);
-
---text-P:clamp(16px,1.5vw,20px);
-
---menu:clamp(14px,1vw,18px);
-
---knoppen:clamp(14px,1.2vw, 18px);
+    --title-H1: clamp(36px, 6vw, 96px);
+    --title-H2: clamp(28px, 4vw, 48px);
+    --title-H3: clamp(20px, 2.5vw, 32px);
+    --title-H4: clamp(18px, 2vw, 30px);
+    --text-P: clamp(16px, 1.5vw, 20px);
+    --menu: clamp(14px, 1vw, 18px);
+    --knoppen: clamp(14px, 1.2vw, 18px);
 }
 
-body{
-font-family: "Lato-Regular";
-background:var(--darkblue);
+/* =========================
+   BASIS
+========================= */
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: "Lato-Regular", sans-serif;
+    background: var(--darkblue);
+    color: var(--white);
+    overflow-x: hidden;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
 }
 
 h1 {
-    font-family: "Lato-Black";
+    font-family: "Lato-Black", sans-serif;
     font-size: var(--title-H1);
 }
 
 h2 {
-    font-family: "Lato-Bold";
+    font-family: "Lato-Bold", sans-serif;
     font-size: var(--title-H2);
 }
 
-h3{
-    font-family: "Lato-Bold";
+h3 {
+    font-family: "Lato-Bold", sans-serif;
     font-size: var(--title-H3);
 }
 
-p {
-    font-family: "Lato-Regular";
-    font-size: var(--text-P);
-}
-
 h4 {
-    font-family: "Lato-Light";
-    font-size:var(--menu);
+    font-family: "Lato-Light", sans-serif;
+    font-size: var(--menu);
 }
 
-
-.container{
-
-width:90%;
-max-width:1200px;
-margin:auto;
-
+p {
+    font-family: "Lato-Regular", sans-serif;
+    font-size: var(--text-P);
+    line-height: 1.6;
 }
+
+/* =========================
+   CONTAINER
+========================= */
+
+.container {
+    width: 90%;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+/* =========================
+   HEADER / NAVIGATIE
+========================= */
 
 .header {
-    background-color: black;
+    background-color: var(--black);
     position: sticky;
     top: 0;
     z-index: 1000;
-    padding: 10px;
+    padding: 10px 0;
 }
 
 .nav {
- display:flex;
- justify-content: space-between;
- align-items: center;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 30px;
 }
 
-
-
 .logo {
-    width: 100%;
-    max-width: 50px;
+    width: 50px;
+    max-width: 100%;
     height: auto;
     display: block;
 }
 
 .nav-ul {
-   list-style: none;
+    list-style: none;
     display: flex;
+    align-items: center;
     gap: 30px;
 }
 
-.nav-ul :hover {
-    transform: scale(1.1);
-    color: var(--pink);
-    font-size: "Lato-Bold";
-    text-decoration: underline;
+.nav-ul li {
+    transition: transform 0.2s ease;
+}
+
+.nav-ul li:hover {
+    transform: scale(1.05);
 }
 
 .nav a {
     text-decoration: none;
     color: var(--white);
+    font-size: var(--menu);
+    transition: color 0.2s ease;
 }
 
-@media (max-width:768) {
-    nav {
-        flex-direction: column;
-        gap: 20px;
-    }
-
-    header {
-        padding-block: 20px;
-    }
+.nav a:hover {
+    color: var(--pink);
+    text-decoration: underline;
 }
+
+/* =========================
+   HERO
+========================= */
 
 .hero-bg {
     background-image: url(../images/Landingspage_portfolio-CR\ \(1\).jpg);
     background-position: center;
     background-repeat: no-repeat;
-    background-size:cover;
-    padding-block: 240px;
+    background-size: cover;
+    min-height: 70vh;
+    display: flex;
+    align-items: center;
+    padding: 100px 20px;
 }
 
 .projecten-bg {
-    padding-block: 60px;
-    background-image: linear-gradient(rgba(0,0,0,0.75),rgba(0,0,0,0.75)), 
-     url(../images/PosterWall.png);
+    padding: 60px 20px;
+    background-image:
+        linear-gradient(rgba(0, 0, 0, 0.75), rgba(0, 0, 0, 0.75)),
+        url(../images/PosterWall.png);
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
-    background-color: #333;
-
+    background-color: var(--gray);
 }
+
+/* =========================
+   LOOKING BACK
+========================= */
 
 .Hero-RM-bg {
-    background-image:  linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
-     url(../images/LookingBack.jpg);
+    background-image:
+        linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
+        url(../images/LookingBack.jpg);
     background-position: center;
     background-repeat: no-repeat;
-    background-size: auto;
-    padding: 60px 120px; 
+    background-size: cover;
+    padding: 100px 20px;
 }
+
+/* =========================
+   CARDS
+========================= */
 
 .cards-images {
     width: 100%;
-    aspect-ratio: 16/9;
+    aspect-ratio: 16 / 9;
     border-radius: 5px;
     overflow: hidden;
 }
 
 .cards-images img {
-    width:100%;
-    height:100%;
-    object-fit:cover;
-    display:block; 
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
 }
+
+/* =========================
+   ABOUT
+========================= */
 
 .about-bg {
     background-image:
-    linear-gradient(rgba(0,0,0,0.75),rgba(0,0,0,0.75)), 
-    url(../images/shooting_badkamer.jpg);
+        linear-gradient(rgba(0, 0, 0, 0.75), rgba(0, 0, 0, 0.75)),
+        url(../images/shooting_badkamer.jpg);
+
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
-    padding: 40px 80px 40px 80px;
 
+    padding: 50px 20px;
     border-radius: 25px;
-    margin:50px 50px 50px 50px;
-}
-
-.about-image {
-    width: 50%;
-    height: auto;
-    max-width: 600px;
-    
+    margin: 50px auto;
+    width: 90%;
+    max-width: 1400px;
 }
 
 .about-bg .container {
     display: flex;
-    align-items:center;
-    justify-content:space-between;
-    gap:50px; 
+    align-items: center;
+    justify-content: space-between;
+    gap: 50px;
+}
+
+.about-content {
+    flex: 1;
 }
 
 .about-image {
-    width:100%;
-    max-width:800px;
-   
+    flex: 1;
+    width: 100%;
+    max-width: 600px;
 }
-
 
 .about-image img {
-    width:100%;
-    height:auto;
-    display:block;
-}
-
-@media(max-width:768px){
-
-    .about-bg .container {
-
-        flex-direction:column;
-
-        text-align:center;
-
-    }
-
-
-    .about-content,
-    .about-image {
-
-        width:100%;
-
-    }
-
-
-    .about-image {
-
-        max-width:300px;
-
-    }
-
-}
-
-.footer-bg {
-    background-color: var(--black);
-    padding:60px;
-    margin-top: 30px;
-}
-
-.logo-big {
     width: 100%;
-    max-width: 120px;
     height: auto;
     display: block;
+    border-radius: 10px;
 }
 
+/* =========================
+   VIDEO
+========================= */
 
 .responsive-video {
     width: 100%;
-    max-width: 1920px; 
+    max-width: 1920px;
     height: auto;
     display: block;
     margin: 0 auto;
 }
 
+/* =========================
+   FOOTER
+========================= */
+
+.footer-bg {
+    background-color: var(--black);
+    padding: 60px 20px;
+    margin-top: 30px;
+}
+
+.logo-big {
+    width: 120px;
+    max-width: 100%;
+    height: auto;
+    display: block;
+}
+
+/* =========================
+   FOTOGRAFIE
+========================= */
+
 .fotografie-RM-bg {
-     background-image: linear-gradient(rgba(0, 0, 0, 0.75), rgba(0, 0, 0, 0.75)),
-     url(../images/Ik&decamera.jpg);
+    background-image:
+        linear-gradient(rgba(0, 0, 0, 0.75), rgba(0, 0, 0, 0.75)),
+        url(../images/Ik&decamera.jpg);
+
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
-    padding: 50px 20px;
+    padding: 60px 20px;
 }
 
 .mixedmedia-RM-bg {
-    background-image: linear-gradient(rgba(0, 0, 0, 0.75), rgba(0, 0, 0, 0.75)),
-     url(../images/Gimbal.jpg);
+    background-image:
+        linear-gradient(rgba(0, 0, 0, 0.75), rgba(0, 0, 0, 0.75)),
+        url(../images/Gimbal.jpg);
+
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
-    padding: 50px 20px;
+    padding: 60px 20px;
 }
 
 .a {
     text-decoration: none;
-    color: var(--blue)
+    color: var(--blue);
 }
 
+/* =========================
+   BORBOLETA
+========================= */
+
 .Hero-borboleta-bg {
-    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
-     url(../images/Andre-tor.jpg);
+    background-image:
+        linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
+        url(../images/Andre-tor.jpg);
+
     background-position: center;
     background-repeat: no-repeat;
-    background-size:cover;
-    padding-block: 240px;
+    background-size: cover;
+
+    min-height: 70vh;
+    display: flex;
+    align-items: center;
+    padding: 100px 20px;
 }
 
 .hero-borboleta-content {
     color: var(--white);
-    text-align: center; 
+    text-align: center;
+    width: 100%;
 }
 
-.borboleta-promotie-bg  {
-   padding: 30px 160px;
-   background-color: #333;
+.borboleta-promotie-bg {
+    padding: 50px 20px;
+    background-color: var(--gray);
 }
 
 .borboleta-container-bg {
- background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
-     url(../images/muziek&literatuur-fokkert.jpg);
+    background-image:
+        linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
+        url(../images/muziek&literatuur-fokkert.jpg);
+
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
-    padding: 50px 20px;
+
+    padding: 60px 20px;
 }
 
 .mixedmedia-Borboleta {
-    background-color: #333;
-    padding: 50px;
+    background-color: var(--gray);
+    padding: 60px 20px;
 }
 
+/* =========================
+   ONTWIKKELING
+========================= */
+
 .Hero-ontwikkeling-bg {
-    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
-     url(../images/shooting.jpg);
+    background-image:
+        linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
+        url(../images/shooting.jpg);
+
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
-    padding-block: 240px;
-   
+
+    min-height: 70vh;
+    display: flex;
+    align-items: center;
+    padding: 100px 20px;
 }
 
 .fotografie-own-bg {
-    background-color: #333;
-    padding: 50px;
+    background-color: var(--gray);
+    padding: 60px 20px;
 }
 
+/* =========================
+   STUDIE
+========================= */
+
 .studie-bg {
-    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
-     url(../images/image.png);
+    background-image:
+        linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
+        url(../images/image.png);
+
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
-    padding-block: 240px;
+
+    min-height: 70vh;
+    display: flex;
+    align-items: center;
+    padding: 100px 20px;
 }
+
+/* =========================
+   TABLET
+========================= */
+
+@media (max-width: 768px) {
+
+    .container {
+        width: 92%;
+    }
+
+    /* Navigatie */
+    .nav {
+        flex-direction: column;
+        gap: 15px;
+    }
+
+    .nav-ul {
+        gap: 15px;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    .header {
+        padding: 15px 0;
+    }
+
+    /* Hero's */
+    .hero-bg,
+    .Hero-borboleta-bg,
+    .Hero-ontwikkeling-bg,
+    .studie-bg {
+        min-height: 60vh;
+        padding: 80px 20px;
+    }
+
+    .Hero-RM-bg {
+        padding: 80px 20px;
+    }
+
+    /* About */
+    .about-bg {
+        width: 92%;
+        margin: 30px auto;
+        padding: 40px 20px;
+        border-radius: 20px;
+    }
+
+    .about-bg .container {
+        flex-direction: column;
+        text-align: center;
+        gap: 30px;
+    }
+
+    .about-content,
+    .about-image {
+        width: 100%;
+        max-width: 600px;
+    }
+
+    /* Secties */
+    .projecten-bg,
+    .fotografie-RM-bg,
+    .mixedmedia-RM-bg,
+    .borboleta-container-bg {
+        padding: 50px 20px;
+    }
+
+    .mixedmedia-Borboleta,
+    .fotografie-own-bg {
+        padding: 50px 20px;
+    }
+}
+
+/* =========================
+   TELEFOON
+========================= */
+
+@media (max-width: 480px) {
+
+    body {
+        overflow-x: hidden;
+    }
+
+    .container {
+        width: 92%;
+    }
+
+    /* Header */
+    .header {
+        padding: 12px 0;
+    }
+
+    .logo {
+        width: 42px;
+    }
+
+    .nav {
+        gap: 12px;
+    }
+
+    .nav-ul {
+        width: 100%;
+        gap: 10px 15px;
+    }
+
+    .nav a {
+        font-size: 14px;
+    }
+
+    /* Hero's */
+    .hero-bg,
+    .Hero-borboleta-bg,
+    .Hero-ontwikkeling-bg,
+    .studie-bg {
+        min-height: 55vh;
+        padding: 70px 15px;
+    }
+
+    .Hero-RM-bg {
+        padding: 60px 15px;
+    }
+
+    /* Tekst */
+    h1 {
+        line-height: 1.1;
+    }
+
+    h2 {
+        line-height: 1.2;
+    }
+
+    h3 {
+        line-height: 1.25;
+    }
+
+    p {
+        line-height: 1.5;
+    }
+
+    /* About */
+    .about-bg {
+        width: 92%;
+        margin: 25px auto;
+        padding: 30px 15px;
+        border-radius: 15px;
+    }
+
+    .about-bg .container {
+        width: 100%;
+        gap: 25px;
+    }
+
+    .about-image {
+        max-width: 100%;
+    }
+
+    .about-image img {
+        border-radius: 8px;
+    }
+
+    /* Secties */
+    .projecten-bg,
+    .fotografie-RM-bg,
+    .mixedmedia-RM-bg,
+    .borboleta-container-bg,
+    .mixedmedia-Borboleta,
+    .fotografie-own-bg {
+        padding: 40px 15px;
+    }
+
+    .borboleta-promotie-bg {
+        padding: 40px 15px;
+    }
+
+    /* Footer */
+    .footer-bg {
+        padding: 40px 15px;
+    }
+
+    .logo-big {
+        width: 100px;
+    }
+
+    /* Video */
+    .responsive-video {
+        width: 100%;
+        height: auto;
+    }
+}
+
+/* =========================
+   HEEL KLEINE TELEFOONS
+========================= */
+
+@media (max-width: 360px) {
+
+    .nav-ul {
+        gap: 8px 12px;
+    }
+
+    .nav a {
+        font-size: 13px;
+    }
+
+    .hero-bg,
+    .Hero-borboleta-bg,
+    .Hero-ontwikkeling-bg,
+    .studie-bg {
+        min-height: 50vh;
+        padding: 60px 12px;
+    }
+
+    .about-bg {
+        padding: 25px 12px;
+    }
+
+    .projecten-bg,
+    .fotografie-RM-bg,
+    .mixedmedia-RM-bg,
+    .borboleta-container-bg,
+    .mixedmedia-Borboleta,
+    .fotografie-own-bg {
+        padding: 35px 12px;
+    }
+}
+

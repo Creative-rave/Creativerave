@@ -1,47 +1,55 @@
+css
+/* =========================================================
+   ALGEMENE CONTENT
+========================================================= */
+
 .hero-content {
-    text-align: right;
-    padding-top: 100px; 
     width: 100%;
+    padding-top: 100px;
+    text-align: right;
     color: var(--white);
 }
 
 .project-content {
+    width: 100%;
+    padding: 10px 0;
     text-align: center;
-    padding: 10px 0 10px 0;
     color: var(--white);
 }
 
 .project-content h1 {
     padding: 10px;
-    font-size: var(--title-h1);
+    font-size: var(--title-H1);
 }
 
 .project-content h3 {
-    padding: 0 0 20px 0;
-    font-size: var(--title-h3);
+    padding: 0 0 20px;
+    font-size: var(--title-H3);
 }
 
-.project-content  h4{
-    font-size: var(--title-h4);
-    text-align: right;
+.project-content h4 {
     padding-top: 25px;
+    font-size: var(--title-H4);
+    text-align: right;
 }
+
 .cards h3 {
-    margin: 10px 0 5px 0;
+    margin: 10px 0 5px;
 }
 
 .cards p {
-    margin: 0 5px 15px 5px;
+    margin: 0 5px 15px;
 }
 
 .cards-content {
-    background:black;
-    padding:30px;
-    text-align:center;  
+    background: var(--black);
+    padding: 30px;
+    text-align: center;
 }
 
 .about-content {
-    width:80%;
+    width: 80%;
+    max-width: 700px;
     line-height: 1.5;
     color: var(--white);
 }
@@ -57,323 +65,232 @@
 }
 
 .connect {
+    padding: 50px 20px;
     text-align: center;
     color: var(--white);
-    padding: 50px;
 }
+
+
+/* =========================================================
+   HERO RM
+========================================================= */
 
 .Hero-RM-content {
-   flex: 1;
+    flex: 1;
+    width: 100%;
     max-width: 650px;
-    color: var(--white);
     margin: auto;
+    color: var(--white);
     text-align: center;
-   
 }
 
-.Hero-RM-content h1{
-    font-size:clamp(40px,6vw,90px);
+.Hero-RM-content h1 {
     padding-bottom: 10px;
+    font-size: clamp(40px, 6vw, 90px);
 }
 
-.verslag-content{
-   display:flex;
-    align-items:center;
-    justify-content:space-between;
-    gap:clamp(30px,6vw,80px);
-    margin-block:clamp(50px,8vw,100px);
+
+/* =========================================================
+   VERSLAG
+========================================================= */
+
+.verslag-content {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: clamp(30px, 6vw, 80px);
+    margin-block: clamp(50px, 8vw, 100px);
 }
 
 .verslag-fotocontainer {
-    flex: 1;
     position: relative;
+    flex: 1;
     width: 100%;
     max-width: 900px;
-    aspect-ratio: 9/7;
+    aspect-ratio: 9 / 7;
     margin: 0 auto;
     overflow: visible;
 }
 
 .verslag-tekst {
     flex: 1;
+    width: 100%;
     max-width: 650px;
-    color: var(--white);
     margin: 0;
+    color: var(--white);
     text-align: left;
-    
 }
 
 .verslag-tekst h2 {
-    font-size:var(--title-H2);
-    line-height:1.2;
-    margin-bottom:20px;
+    margin-bottom: 20px;
+    font-size: var(--title-H2);
+    line-height: 1.2;
 }
 
 .verslag-tekst h3 {
-    font-size:var(--title-H3);
-    margin-bottom:20px;
+    margin-bottom: 20px;
+    padding: 10px 0;
+    font-size: var(--title-H3);
 }
 
 .verslag-tekst p {
-    font-size:clamp(16px,1.5vw,20px);
-    line-height:1.7;
-    margin-bottom:20px;
-}
-
-@media(max-width:768px){
-
-    .verslag-tekst{
-
-        max-width:100%;
-
-        text-align:center;
-
-    }
-
+    margin-bottom: 20px;
+    padding-bottom: 10px;
+    font-size: var(--text-P);
+    line-height: 1.7;
 }
 
 
-.verslag-tekst p {
-    padding: 0 0 10px 0;
-}
+/* =========================================================
+   WAAIER
+   Alleen desktop.
 
-.verslag-tekst h3 {
-    padding:10px 0;
-}
+   Op tablet en telefoon wordt dit hieronder
+   automatisch omgezet naar normale afbeeldingen.
+========================================================= */
+
 .foto {
     width: 48%;
     height: auto;
     border-radius: 10px;
-    box-shadow: 0 5px 15px rgba(0,0,0,0.3);
-    flex: 1;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
 }
 
 .foto1 {
     position: absolute;
-    left: 0;
     top: 30px;
+    left: 0;
     z-index: 1;
-
-    transition: all 0.3s ease;
+    transition: transform 0.3s ease;
 }
 
 .foto2 {
     position: absolute;
-    left: 38%;  
     top: 0;
-    z-index: 2; 
-
+    left: 38%;
+    z-index: 2;
     border-radius: 10px;
-    box-shadow: 0 5px 15px rgba(0,0,0,0.3);
-
-    transition: all 0.3s ease;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+    transition: transform 0.3s ease;
     cursor: pointer;
 }
 
-.foto1:hover {
-    z-index: 10;
-    transform: scale(1.15);
-}
-
+.foto1:hover,
 .foto2:hover {
     z-index: 10;
-    transform: scale(1.15);
+    transform: scale(1.08);
 }
 
-@media (max-width: 768px){
 
-    .verslag-content{
-
-        flex-direction:column;
-
-        gap:40px;
-
-        text-align:center;
-
-    }
-
-}
-
-@media (max-width:768px){
-
-    .Verslag-fotocontainer{
-
-        max-width:350px;
-
-        aspect-ratio:1/1;
-
-    }
-
-    .foto{
-
-        width:65%;
-
-    }
-
-    .foto1{
-
-        left:0;
-
-        top:30px;
-
-    }
-
-    .foto2{
-
-        left:35%;
-
-        top:0;
-
-    }
-
-}
-
-@media (max-width:768px){
-
-    .verslag-content{
-
-        flex-direction:column;
-
-        gap:40px;
-
-        align-items:center;
-
-    }
-
-    .verslag-tekst{
-
-        max-width:100%;
-
-        padding:20px;
-
-        text-align:center;
-
-    }
-
-}
+/* =========================================================
+   FOTOGRAFIE RM
+========================================================= */
 
 .fotografie-RM {
-     width: 100%;
+    width: 100%;
     max-width: 1200px;
     height: auto;
     margin: auto;
+    padding: 25px;
     line-height: 1.8;
     text-align: center;
     color: var(--white);
-    padding: 25px;
 }
 
-.Grafisch-RM{
-    flex:1;
-    max-width:650px;
+.Grafisch-RM {
+    flex: 1;
+    width: 100%;
+    max-width: 650px;
     color: var(--white);
 }
 
-.Grafisch-RM h2{
-    font-size:var(--title-H2);
-    margin-bottom:20px;
-     color: var(--white);
-
+.Grafisch-RM h2 {
+    margin-bottom: 20px;
+    font-size: var(--title-H2);
+    color: var(--white);
 }
 
-.Grafisch-RM p{
-    font-size:var(--text-P);
-    line-height:1.7;
-    margin-bottom:20px;
-     color: var(--white);
-
+.Grafisch-RM p {
+    margin-bottom: 20px;
+    font-size: var(--text-P);
+    line-height: 1.7;
+    color: var(--white);
 }
+
+
+/* =========================================================
+   VIDEO
+========================================================= */
 
 .video-project {
-    display:flex;
-    align-items:center;
-    justify-content:space-between;
-    gap:clamp(30px,5vw,60px);
-    max-width:1200px;
-    width:90%;
-    margin:clamp(50px,8vw,80px) auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 90%;
+    max-width: 1200px;
+    gap: clamp(30px, 5vw, 60px);
+    margin: clamp(50px, 8vw, 80px) auto;
 }
 
 .video-gallery {
-    width:100%;
+    display: grid;
     flex: 1;
-    max-width:650px;
-    display:grid;
-    
-    grid-template-columns:repeat(2,1fr);
+    width: 100%;
+    max-width: 650px;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 10px;
 }
 
 .video-gallery video {
-    width:100%;
-    height:auto;
-    display:block;
-    padding: 10px;
+    display: block;
+    width: 100%;
+    height: auto;
+    padding: 5px;
     border-radius: 10px;
 }
 
 .video-main {
     grid-column: span 2;
-   
 }
 
 .mixmedia-RM {
-    flex:1;
-    max-width:650px;
-    text-align:right;
-    color: var(--white);
+    flex: 1;
+    width: 100%;
+    max-width: 650px;
     padding: 25px;
+    color: var(--white);
+    text-align: right;
 }
 
-@media (max-width:768px){
 
-    .video-project{
-
-        flex-direction:column;
-
-        gap:40px;
-
-    }
-
-    .mixmedia-RM{
-
-        max-width:100%;
-
-        text-align:center;
-
-    }
-
-    .video-gallery{
-
-        grid-template-columns:1fr;
-
-    }
-
-    .video-main{
-
-        grid-column:span 1;
-
-    }
-
-}
+/* =========================================================
+   BORBOLETA
+========================================================= */
 
 .hero-borboleta-content {
     color: var(--white);
     text-align: center;
 }
-.hero-borboleta-content H3 {
+
+.hero-borboleta-content h3 {
     padding: 25px;
 }
 
 .borboleta-intro {
     margin-bottom: 2rem;
-    padding:100px 0 50px 0;
-    text-align: left;
+    padding: 100px 0 50px;
     color: var(--white);
+    text-align: left;
 }
 
 .borboleta-intro p {
     padding-bottom: 15px;
 }
+
+
+/* =========================================================
+   PORTFOLIO
+========================================================= */
 
 .portfolio {
     display: grid;
@@ -382,151 +299,812 @@
 }
 
 .portfolio-item {
-    text-align: center;
+    min-width: 0;
     color: var(--white);
+    text-align: center;
+}
+
+.portfolio-item a {
+    display: block;
+    text-decoration: none;
 }
 
 .portfolio img {
+    display: block;
     width: 100%;
     height: auto;
-    display: block;
     border-radius: 10px;
+    transition: transform 0.3s ease;
+}
+
+.portfolio-item a:hover img {
+    transform: scale(1.03);
 }
 
 .portfolio-item p {
     margin-top: 0.75rem;
+    line-height: 1.5;
 }
 
-@media (max-width: 900px) {
-    .portfolio {
-        grid-template-columns: repeat(2, 1fr);
-    }
-}
 
-@media (max-width: 600px) {
-    .portfolio {
-        grid-template-columns: 1fr;
-        gap: 25px;
-    }
-
-    .borboleta-intro {
-        text-align: center;
-    }
-}
+/* =========================================================
+   BORBOLETA PROMOTIE
+========================================================= */
 
 .borboleta-promotie-content-bg {
-    background-color: var(--gray);
     padding: 60px;
+    background-color: var(--gray);
 }
-
 
 .borboleta-promotie-content {
     margin-bottom: 3rem;
     padding: 10px;
-    text-align: center;
     color: var(--white);
+    text-align: center;
 }
 
 .borboleta-container-promotie {
-      text-align: center;
     color: var(--white);
+    text-align: center;
 }
 
-.mixmedia-Borboleta{
-    flex:1;
-    max-width:650px;
-    text-align:right;
-    color: var(--white);
+.mixmedia-Borboleta {
+    flex: 1;
+    width: 100%;
+    max-width: 650px;
     padding: 10px;
+    color: var(--white);
+    text-align: right;
 }
+
+
+/* =========================================================
+   ONTWIKKELING
+========================================================= */
 
 .Hero-ontwikkeling-content {
-   text-align: center; 
-   color: var(--white);
-   padding: 15px;  
+    padding: 15px;
+    color: var(--white);
+    text-align: center;
 }
+
 .Hero-ontwikkeling-content h2 {
     padding: 25px;
 }
 
 .Mijn-ontwikkeling-grafisch p {
-    padding: 0 0 10px 0;
+    padding-bottom: 10px;
 }
 
-@media(max-width:768px){
 
-    .Mijn-ontwikkeling-grafisch{
-        padding:0;
-    }
-
-}
+/* =========================================================
+   FOTOGRAFIE OWN
+========================================================= */
 
 .fotografie-own {
     width: 100%;
     max-width: 1000px;
     height: auto;
     margin: auto;
-    line-height: 1.8;
-    text-align: center;
-    color: var(--white);
     padding: 25px;
+    line-height: 1.8;
+    color: var(--white);
+    text-align: center;
 }
 
+
+/* =========================================================
+   MIXED MEDIA OWN
+========================================================= */
+
 .mixedmedia-own {
-    color: white;
-    align-items: center;
-    text-align: left;
-    width: 800px;
+    width: 100%;
+    max-width: 800px;
+    padding: 75px 0 50px;
+    color: var(--white);
     line-height: 1.8;
-    padding: 75px 0px 50px 0px;
+    text-align: left;
 }
+
+
+/* =========================================================
+   AFBEELDING RECHTS
+========================================================= */
 
 .afbeelding-rechts {
     display: flex;
     flex-direction: row-reverse;
     align-items: center;
-    gap: 20px;
+    gap: clamp(20px, 4vw, 40px);
     margin-bottom: 75px;
 }
 
 .afbeelding-rechts img {
     width: 50%;
-    height: auto;
     max-width: 600px;
+    height: auto;
+    border-radius: 10px;
 }
+
+
+/* =========================================================
+   AFBEELDING LINKS
+========================================================= */
 
 .afbeelding-links {
     display: flex;
     align-items: center;
-    gap: 20px;
+    gap: clamp(20px, 4vw, 40px);
     margin-bottom: 75px;
-    padding: 100px 0 0 0;
+    padding-top: 100px;
 }
 
 .afbeelding-links img {
     width: 75%;
-    height: auto;
     max-width: 600px;
+    height: auto;
+    border-radius: 10px;
 }
 
+
+/* =========================================================
+   TEKST
+========================================================= */
+
 .text-left {
+    flex: 1;
+    width: 100%;
+    max-width: 650px;
+    padding: 50px 0 25px;
     color: var(--white);
     text-align: left;
-    padding: 50px 0 25px 0;
-    flex:1;
-    max-width:650px;
-    color: var(--white);
 }
 
 .text-left p {
-    padding: 20px 0 20px 0;
+    padding: 20px 0;
 }
-
 
 .text-center {
-    color: var(--white);
-    text-align: center;
-    padding: 50px 0 25px 0;
+    width: 100%;
     max-width: 650px;
     margin: 0 auto;
+    padding: 50px 0 25px;
+    color: var(--white);
+    text-align: center;
 }
+
+
+/* =========================================================
+   TABLET
+   769px - 1024px
+========================================================= */
+
+@media (max-width: 1024px) {
+
+    /* -----------------------------------------
+       VERSLAG
+    ----------------------------------------- */
+
+    .verslag-content {
+        flex-direction: column;
+        gap: 45px;
+    }
+
+    /*
+       Waaier uitschakelen.
+       Foto's worden normale afbeeldingen.
+    */
+
+    .verslag-fotocontainer {
+        position: static;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 100%;
+        max-width: 700px;
+        aspect-ratio: auto;
+        gap: 20px;
+    }
+
+    .foto,
+    .foto1,
+    .foto2 {
+        position: static;
+        width: 48%;
+        max-width: 330px;
+        height: auto;
+
+        left: auto;
+        top: auto;
+        z-index: auto;
+
+        transform: none;
+        cursor: default;
+    }
+
+    .foto1:hover,
+    .foto2:hover {
+        z-index: auto;
+        transform: none;
+    }
+
+    .verslag-tekst {
+        width: 100%;
+        max-width: 700px;
+        text-align: center;
+    }
+
+
+    /* -----------------------------------------
+       PORTFOLIO
+    ----------------------------------------- */
+
+    .portfolio {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 25px;
+    }
+
+
+    /* -----------------------------------------
+       AFBEELDING + TEKST
+    ----------------------------------------- */
+
+    .afbeelding-rechts,
+    .afbeelding-links {
+        gap: 30px;
+    }
+
+    .afbeelding-rechts img,
+    .afbeelding-links img {
+        max-width: 450px;
+    }
+
+
+    /* -----------------------------------------
+       VIDEO
+    ----------------------------------------- */
+
+    .video-project {
+        flex-direction: column;
+        gap: 40px;
+    }
+
+    .video-gallery {
+        width: 100%;
+        max-width: 750px;
+    }
+
+    .mixmedia-RM {
+        width: 100%;
+        max-width: 750px;
+        text-align: center;
+    }
+
+
+    /* -----------------------------------------
+       MIXED MEDIA
+    ----------------------------------------- */
+
+    .mixedmedia-own {
+        width: 100%;
+        max-width: 750px;
+    }
+
+
+    /* -----------------------------------------
+       PROMOTIE
+    ----------------------------------------- */
+
+    .borboleta-promotie-content-bg {
+        padding: 50px 30px;
+    }
+}
+
+
+/* =========================================================
+   TELEFOON
+   768px en kleiner
+========================================================= */
+
+@media (max-width: 768px) {
+
+    /* -----------------------------------------
+       HERO / CONTENT
+    ----------------------------------------- */
+
+    .hero-content {
+        padding: 50px 15px 0;
+        text-align: center;
+    }
+
+    .project-content {
+        padding: 10px 15px;
+    }
+
+    .project-content h4 {
+        text-align: center;
+    }
+
+    .Hero-RM-content {
+        padding: 0 15px;
+    }
+
+    .Hero-RM-content h1 {
+        font-size: clamp(36px, 11vw, 60px);
+    }
+
+
+    /* -----------------------------------------
+       ABOUT
+    ----------------------------------------- */
+
+    .about-content {
+        width: 100%;
+        max-width: 650px;
+    }
+
+
+    /* -----------------------------------------
+       VERSLAG
+    ----------------------------------------- */
+
+    .verslag-content {
+        flex-direction: column;
+        align-items: center;
+        gap: 35px;
+        margin-block: 50px;
+    }
+
+    /*
+       WAAIER VOLLEDIG UIT.
+    */
+
+    .verslag-fotocontainer {
+        position: static;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+
+        width: 100%;
+        max-width: 500px;
+
+        aspect-ratio: auto;
+
+        gap: 20px;
+    }
+
+    .foto,
+    .foto1,
+    .foto2 {
+        position: static;
+
+        width: 100%;
+        max-width: 500px;
+        height: auto;
+
+        left: auto;
+        top: auto;
+        z-index: auto;
+
+        transform: none;
+        cursor: default;
+    }
+
+    .foto1:hover,
+    .foto2:hover {
+        z-index: auto;
+        transform: none;
+    }
+
+    .verslag-tekst {
+        width: 100%;
+        max-width: 650px;
+        padding: 0 20px;
+        text-align: center;
+    }
+
+    .verslag-tekst h2 {
+        margin-bottom: 15px;
+    }
+
+    .verslag-tekst h3 {
+        margin-bottom: 15px;
+    }
+
+    .verslag-tekst p {
+        margin-bottom: 18px;
+        line-height: 1.6;
+    }
+
+
+    /* -----------------------------------------
+       FOTOGRAFIE
+    ----------------------------------------- */
+
+    .fotografie-RM,
+    .fotografie-own {
+        width: 100%;
+        padding: 30px 15px;
+    }
+
+
+    /* -----------------------------------------
+       GRAFISCH
+    ----------------------------------------- */
+
+    .Grafisch-RM {
+        width: 100%;
+        max-width: 650px;
+    }
+
+    .Grafisch-RM h2 {
+        margin-bottom: 15px;
+    }
+
+    .Grafisch-RM p {
+        line-height: 1.6;
+    }
+
+
+    /* -----------------------------------------
+       VIDEO
+    ----------------------------------------- */
+
+    .video-project {
+        width: 94%;
+        flex-direction: column;
+        gap: 30px;
+        margin: 50px auto;
+    }
+
+    .video-gallery {
+        width: 100%;
+        max-width: 650px;
+        grid-template-columns: 1fr;
+        gap: 15px;
+    }
+
+    .video-gallery video {
+        padding: 0;
+    }
+
+    .video-main {
+        grid-column: span 1;
+    }
+
+    .mixmedia-RM {
+        width: 100%;
+        max-width: 650px;
+        padding: 0 10px;
+        text-align: center;
+    }
+
+
+    /* -----------------------------------------
+       BORBOLETA
+    ----------------------------------------- */
+
+    .borboleta-intro {
+        padding: 60px 15px 30px;
+        text-align: center;
+    }
+
+    .borboleta-intro p {
+        padding-bottom: 10px;
+    }
+
+    .hero-borboleta-content h3 {
+        padding: 15px;
+    }
+
+
+    /* -----------------------------------------
+       PORTFOLIO / CAROUSEL
+    ----------------------------------------- */
+
+    .portfolio {
+        grid-template-columns: 1fr;
+        gap: 35px;
+    }
+
+    .portfolio-item {
+        width: 100%;
+        max-width: 600px;
+        margin: 0 auto;
+    }
+
+    .portfolio-item a {
+        display: block;
+
+        /*
+         * Zorgt voor een duidelijk klikbaar gebied.
+         */
+        min-height: 44px;
+    }
+
+    .portfolio img {
+        width: 100%;
+        height: auto;
+    }
+
+    /*
+       Op touch-apparaten geen hover-zoom.
+    */
+
+    .portfolio-item a:hover img {
+        transform: none;
+    }
+
+    .portfolio-item p {
+        margin-top: 12px;
+        line-height: 1.5;
+    }
+
+
+    /* -----------------------------------------
+       PROMOTIE
+    ----------------------------------------- */
+
+    .borboleta-promotie-content-bg {
+        padding: 40px 20px;
+    }
+
+    .borboleta-promotie-content {
+        margin-bottom: 2rem;
+        padding: 10px 0;
+    }
+
+    .mixmedia-Borboleta {
+        width: 100%;
+        max-width: 650px;
+        padding: 10px 0;
+        text-align: center;
+    }
+
+
+    /* -----------------------------------------
+       ONTWIKKELING
+    ----------------------------------------- */
+
+    .Hero-ontwikkeling-content {
+        padding: 15px 10px;
+    }
+
+    .Hero-ontwikkeling-content h2 {
+        padding: 15px 0;
+    }
+
+    .Mijn-ontwikkeling-grafisch {
+        width: 100%;
+        padding: 0;
+    }
+
+    .Mijn-ontwikkeling-grafisch p {
+        padding-bottom: 10px;
+    }
+
+
+    /* -----------------------------------------
+       MIXED MEDIA
+    ----------------------------------------- */
+
+    .mixedmedia-own {
+        width: 100%;
+        max-width: 650px;
+        padding: 40px 15px;
+        text-align: center;
+    }
+
+
+    /* -----------------------------------------
+       AFBEELDING + TEKST
+    ----------------------------------------- */
+
+    .afbeelding-rechts,
+    .afbeelding-links {
+        flex-direction: column;
+        align-items: center;
+        gap: 25px;
+
+        width: 100%;
+
+        margin-bottom: 50px;
+        padding-top: 40px;
+    }
+
+    .afbeelding-rechts img,
+    .afbeelding-links img {
+        width: 100%;
+        max-width: 600px;
+        height: auto;
+    }
+
+    .text-left {
+        width: 100%;
+        max-width: 650px;
+        padding: 10px 15px 30px;
+        text-align: center;
+    }
+
+    .text-left p {
+        padding: 15px 0;
+    }
+
+    .text-center {
+        width: 100%;
+        max-width: 650px;
+        padding: 30px 15px;
+    }
+
+
+    /* -----------------------------------------
+       FOOTER / CONNECT
+    ----------------------------------------- */
+
+    .connect {
+        padding: 40px 15px;
+    }
+}
+
+
+/* =========================================================
+   KLEINE TELEFOON
+   480px en kleiner
+========================================================= */
+
+@media (max-width: 480px) {
+
+    .hero-content {
+        padding: 35px 10px 0;
+    }
+
+    .project-content {
+        padding: 10px;
+    }
+
+    .cards-content {
+        padding: 20px 15px;
+    }
+
+    .connect {
+        padding: 35px 15px;
+    }
+
+
+    /* -----------------------------------------
+       VERSLAG
+    ----------------------------------------- */
+
+    .verslag-content {
+        gap: 30px;
+        margin-block: 40px;
+    }
+
+    .verslag-fotocontainer {
+        max-width: 100%;
+        gap: 15px;
+    }
+
+    .foto,
+    .foto1,
+    .foto2 {
+        width: 100%;
+        max-width: 100%;
+    }
+
+    .verslag-tekst {
+        padding: 0 10px;
+    }
+
+
+    /* -----------------------------------------
+       VIDEO
+    ----------------------------------------- */
+
+    .video-project {
+        width: 96%;
+        margin: 40px auto;
+    }
+
+    .video-gallery {
+        gap: 12px;
+    }
+
+
+    /* -----------------------------------------
+       PORTFOLIO
+    ----------------------------------------- */
+
+    .portfolio {
+        gap: 30px;
+    }
+
+    .portfolio-item {
+        max-width: 100%;
+    }
+
+
+    /* -----------------------------------------
+       BORBOLETA
+    ----------------------------------------- */
+
+    .borboleta-intro {
+        padding: 40px 10px 25px;
+    }
+
+    .borboleta-promotie-content-bg {
+        padding: 30px 15px;
+    }
+
+
+    /* -----------------------------------------
+       AFBEELDING + TEKST
+    ----------------------------------------- */
+
+    .afbeelding-rechts,
+    .afbeelding-links {
+        gap: 20px;
+        margin-bottom: 40px;
+        padding-top: 30px;
+    }
+
+    .text-left {
+        padding: 10px 10px 25px;
+    }
+
+    .text-center {
+        padding: 25px 10px;
+    }
+
+
+    /* -----------------------------------------
+       MIXED MEDIA
+    ----------------------------------------- */
+
+    .mixedmedia-own {
+        padding: 30px 10px;
+    }
+}
+
+
+/* =========================================================
+   EXTRA KLEINE TELEFOON
+   360px en kleiner
+========================================================= */
+
+@media (max-width: 360px) {
+
+    .cards-content {
+        padding: 18px 12px;
+    }
+
+    .verslag-content {
+        gap: 25px;
+    }
+
+    .portfolio {
+        gap: 25px;
+    }
+
+    .video-project {
+        width: 98%;
+    }
+}
+
+
+/* =========================================================
+   TOUCH DEVICES
+   Geen hover-effecten die op een telefoon/tablet
+   blijven hangen na aanraken.
+========================================================= */
+
+@media (hover: none) and (pointer: coarse) {
+
+    .foto1:hover,
+    .foto2:hover,
+    .portfolio-item a:hover img {
+        transform: none;
+        z-index: auto;
+    }
+}
+

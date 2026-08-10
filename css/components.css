@@ -1,121 +1,204 @@
+
+/* =========================================================
+   CARDS
+========================================================= */
+
 .cards-display {
     display: grid;
-    grid-template-columns: repeat(auto-fit,minmax(280px,1fr));
-    gap: 30px;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: clamp(15px, 2.5vw, 30px);
     align-items: stretch;
+
+    width: 100%;
+    max-width: 1400px;
+
+    margin: 0 auto;
     padding: 10px;
+    box-sizing: border-box;
 }
+
 
 .cards {
-  background: white;
-  width: 100%;
-  height: auto;
-  border-radius: 10px;
-  overflow: hidden;
-  box-shadow: 10%;
-  text-decoration: none;
-  color: var(--inkt);
-  transition: transform var(--overgang), box-shadow var(--overgang);
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  text-align: center;
+    background: white;
+
+    width: 100%;
+    height: auto;
+    min-width: 0;
+
+    border-radius: 10px;
+    overflow: hidden;
+
+    box-shadow: 0 8px 25px rgba(0, 0, 0, .12);
+
+    text-decoration: none;
+    color: var(--inkt);
+
+    transition:
+        transform var(--overgang),
+        box-shadow var(--overgang);
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    text-align: center;
+
+    box-sizing: border-box;
 }
+
 
 .cards:hover {
-    transform:translateY(-5px);
-    box-shadow: 0 20px 40px rgba(89, 47, 51, 1);
+    transform: translateY(-5px);
+
+    box-shadow:
+        0 20px 40px rgba(89, 47, 51, .35);
 }
 
+
+/* =========================================================
+   BUTTONS
+========================================================= */
+
 .btn {
-    display:inline-block;
+    display: inline-block;
+
     padding: 8px 20px;
+
     border-radius: 10px;
-    font-size: clamp (14px,1.2vw,18px);
-    transition: 0.3s;
+
+    font-size: clamp(14px, 1.2vw, 18px);
+
+    transition: .3s;
+
     cursor: pointer;
+
     margin-top: 15px;
+
     text-decoration: none;
+
+    box-sizing: border-box;
 }
+
 
 .btn-pink {
     background-color: var(--pink);
     color: var(--white);
 }
 
+
 .btn-white {
     background-color: var(--white);
     color: var(--black);
-    
 }
+
 
 .btn:hover {
-    transform: scale(1.1);
+    transform: scale(1.05);
 }
 
+
+/* =========================================================
+   SOCIAL MEDIA
+========================================================= */
+
 .socials-connect {
+    display: grid;
+
     grid-template-columns: repeat(3, 1fr);
-   align-items: center;
-   text-align: center;
-   gap: 20px;
-   width: 500px;
-   line-height: 1.5;
-   list-style: none;
-   display: grid;
-   margin: 25px auto; 
-  
+
+    align-items: center;
+    text-align: center;
+
+    gap: clamp(10px, 2vw, 20px);
+
+    width: min(500px, 90%);
+
+    line-height: 1.5;
+
+    list-style: none;
+
+    margin: 25px auto;
+    padding: 0;
+
+    box-sizing: border-box;
 }
+
 
 .socials-connect li {
     background-color: #fff;
-    padding: 10px; 
+
+    padding: 10px;
+
     border-radius: 15px;
-    text-align: center; 
+
+    text-align: center;
+
+    transition: transform .3s ease;
 }
+
 
 .socials-connect a {
     text-decoration: none;
 }
 
+
 .socials span {
-   display: block;
-   
+    display: block;
 }
 
+
 .socials-kanaal {
-    display:block;
-    font-weight:bold;
-    color:#592f33;
-    margin-bottom:5px;
-   
+    display: block;
+
+    font-weight: bold;
+
+    color: #592f33;
+
+    margin-bottom: 5px;
 }
+
 
 .socials-naam {
     font-weight: lighter;
-    color:#d36e70;
+
+    color: #d36e70;
+
     text-decoration: none;
 }
 
+
 .socials-connect li:hover {
-    transform: scale(1.1);
+    transform: scale(1.05);
 }
+
+
+/* =========================================================
+   GALLERY
+========================================================= */
 
 .gallery-grid {
     max-width: 1200px;
     width: 100%;
+
     margin: 0 auto;
+
     padding: 20px;
+
+    box-sizing: border-box;
 
     column-width: 320px;
     column-gap: 15px;
 }
 
+
 .gallery-grid img {
     display: block;
+
     width: 100%;
     height: auto;
 
     margin-bottom: 15px;
+
     border-radius: 10px;
 
     break-inside: avoid;
@@ -124,284 +207,253 @@
 }
 
 
-.project-waaier{
-    display:flex;
-    align-items:center;
-    justify-content:space-between;
-    gap:clamp(2rem,4vw,4rem);
+/* =========================================================
+   PROJECT WAAIER - DESKTOP
+========================================================= */
 
-    width:min(1100px,90%);
-    margin:clamp(4rem,8vw,6rem) auto;
+.project-waaier {
+    display: flex;
 
-    flex-wrap:wrap;
+    align-items: center;
+    justify-content: space-between;
+
+    gap: clamp(2rem, 4vw, 4rem);
+
+    width: min(1100px, 90%);
+
+    margin: clamp(4rem, 8vw, 6rem) auto;
+
+    flex-wrap: wrap;
+
+    box-sizing: border-box;
 }
 
 
-.poster-stack{
-    position:relative;
+/* =========================================================
+   POSTER STACK - DESKTOP
+========================================================= */
 
-    width:clamp(240px,32vw,420px);
-    aspect-ratio:3 / 4;
+.poster-stack {
+    position: relative;
 
-    flex-shrink:0;
+    width: clamp(240px, 32vw, 420px);
+
+    aspect-ratio: 3 / 4;
+
+    flex-shrink: 0;
 }
 
 
+.poster {
+    position: absolute;
 
-.poster{
-    position:absolute;
+    width: 78%;
+    height: 90%;
 
-    width:78%;
-    height:90%;
+    object-fit: contain;
 
-    object-fit:contain;
+    border-radius: 14px;
 
-    border-radius:14px;
+    background: var(--gray);
 
-    background:var(--gray);
-
-    box-shadow:0 12px 30px rgba(0,0,0,.18);
+    box-shadow:
+        0 12px 30px rgba(0, 0, 0, .18);
 
     transition:
         transform .35s ease,
         box-shadow .35s ease;
 
-    display:block;
+    display: block;
 }
 
 
+/* =========================================================
+   WAAIER POSITIES
+   Deze blijven op desktop hetzelfde
+========================================================= */
 
-.p1{
-    top:0;
-    left:0;
-    transform:rotate(-8deg);
-    z-index:1;
-}
+.p1 {
+    top: 0;
+    left: 0;
 
-.p2{
-    top:6%;
-    left:12%;
-    transform:rotate(2deg);
-    z-index:2;
-}
+    transform: rotate(-8deg);
 
-.p3{
-    top:12%;
-    left:24%;
-    transform:rotate(8deg);
-    z-index:3;
-}
-
-.p4{
-    top:18%;
-    left:36%;
-    transform:rotate(-4deg);
-    z-index:4;
+    z-index: 1;
 }
 
 
-/* ===========================
-   HOVER ALLEEN VOOR MUIS
-=========================== */
+.p2 {
+    top: 6%;
+    left: 12%;
 
-@media (hover:hover){
+    transform: rotate(2deg);
 
-    .poster:hover{
+    z-index: 2;
+}
+
+
+.p3 {
+    top: 12%;
+    left: 24%;
+
+    transform: rotate(8deg);
+
+    z-index: 3;
+}
+
+
+.p4 {
+    top: 18%;
+    left: 36%;
+
+    transform: rotate(-4deg);
+
+    z-index: 4;
+}
+
+
+/* =========================================================
+   HOVER
+   Alleen apparaten met een echte muis
+========================================================= */
+
+@media (hover: hover) and (pointer: fine) {
+
+    .poster:hover {
         transform:
             scale(1.12)
             rotate(0deg);
 
-        z-index:20;
+        z-index: 20;
 
         box-shadow:
-            0 20px 45px rgba(0,0,0,.25);
+            0 20px 45px rgba(0, 0, 0, .25);
     }
 
 }
 
 
-@media(max-width:700px){
-
-    .project-waaier{
-        justify-content:center;
-    }
-
-
-    .poster-stack{
-        width:min(90vw,350px);
-    }
-
-
-    .poster{
-        width:82%;
-        height:85%;
-    }
-
-}
-
-
-
-
-
+/* =========================================================
+   SOCIAL MEDIA BORBOLETA
+========================================================= */
 
 .Socialemedia-borboleta-content {
     flex: 1;
+
+    min-width: 0;
+
     color: var(--white);
 }
+
 
 .Socialemedia-borboleta-content h2 {
     margin-bottom: 1rem;
 }
 
+
 .Socialemedia-borboleta-content p {
     line-height: 1.7;
 }
 
-@media (max-width: 900px) {
 
-    .project-waaier {
-        flex-direction: column;
-        text-align: center;
-        gap: 3rem;
-    }
-
-    .Socialemedia-borboleta-content {
-        text-align: center;
-        padding: 0;
-    }
-
-}
-@media (max-width: 600px) {
-
-    .project-waaier {
-        width: 92%;
-        margin: 3rem auto;
-    }
-
-    .poster-stack {
-        width: 260px;
-        height: 350px;
-    }
-
-    .poster {
-        width: 210px;
-    }
-
-    .p2 {
-        top: 14px;
-        left: 20px;
-    }
-
-    .p3 {
-        top: 28px;
-        left: 40px;
-    }
-
-    /* Minder grote hover-animatie op mobiel */
-    .poster-stack:hover .p1 {
-        transform: translateX(-25px) rotate(-8deg);
-    }
-
-    .poster-stack:hover .p2 {
-        transform: translateY(-10px);
-    }
-
-    .poster-stack:hover .p3 {
-        transform: translateX(25px) rotate(8deg);
-    }
-
-}
+/* =========================================================
+   PROMOTIE GALLERY
+========================================================= */
 
 .gallery-promotie {
     display: grid;
+
     grid-template-columns: 1fr 1fr;
     grid-template-rows: repeat(2, 1fr);
-    gap: 20px;
 
-    max-width: 900px;
+    gap: clamp(10px, 2vw, 20px);
+
+    width: min(900px, 90%);
+
     margin: 0 auto 5rem;
+
+    box-sizing: border-box;
 }
+
 
 .gallery-promotie img {
     width: 100%;
     height: 100%;
+
     object-fit: cover;
+
     display: block;
+
     border-radius: 12px;
 }
+
 
 .gallery-promotie img:first-child {
     grid-row: 1 / 3;
 }
 
-@media (max-width: 900px) {
 
-    .gallery-promotie {
-        max-width: 700px;
-        gap: 16px;
-    }
+/* =========================================================
+   PORTFOLIO CAROUSEL
+========================================================= */
 
-}
-@media (max-width: 600px) {
-
-    .gallery-promotie {
-        grid-template-columns: 1fr;
-        grid-template-rows: auto;
-    }
-
-    .gallery-promotie img:first-child {
-        grid-row: auto;
-    }
-
-    .gallery-promotie img {
-        height: auto;
-    }
-
-    .borboleta-promotie-content {
-        text-align: center;
-    }
-
-}
-
-/* Hoofd container */
 .portfolio-carousel {
     display: flex;
+
     align-items: center;
     justify-content: space-between;
-    gap: 4rem;
+
+    gap: clamp(2rem, 5vw, 4rem);
 
     max-width: 1200px;
+
     width: 90%;
+
     margin: 5rem auto;
+
+    box-sizing: border-box;
 }
 
 
 /* Radio buttons verbergen */
+
 .portfolio-carousel input {
     display: none;
 }
 
 
 /* Linker en rechter kant */
+
 .carousel-links,
 .informatie {
     flex: 1;
+
+    min-width: 0;
+
     color: var(--white);
 }
 
 
-/* Poster gedeelte */
+/* =========================================================
+   CAROUSEL AFBEELDINGEN
+========================================================= */
+
 .images {
     position: relative;
+
     width: clamp(240px, 30vw, 350px);
+
     aspect-ratio: 7 / 10;
+
     margin: 0 auto;
 }
 
 
 .image {
     position: absolute;
+
     inset: 0;
+
     display: none;
 }
 
@@ -409,9 +461,11 @@
 .image img {
     width: 100%;
     height: 100%;
+
     object-fit: cover;
 
     border-radius: 12px;
+
     display: block;
 
     transition: transform .3s ease;
@@ -423,7 +477,10 @@
 }
 
 
-/* Actieve poster */
+/* =========================================================
+   ACTIEVE POSTER
+========================================================= */
+
 #project1:checked ~ .carousel-links .image1,
 #project2:checked ~ .carousel-links .image2,
 #project3:checked ~ .carousel-links .image3,
@@ -432,15 +489,20 @@
 }
 
 
-/* Nummer navigatie */
+/* =========================================================
+   NUMMER NAVIGATIE
+========================================================= */
+
 .nummers {
     margin-top: 1.5rem;
+
     text-align: center;
 }
 
 
 .nummers label {
     display: inline-flex;
+
     justify-content: center;
     align-items: center;
 
@@ -452,31 +514,39 @@
     border-radius: 50%;
 
     background: #444;
+
     color: white;
 
     cursor: pointer;
+
     transition: .3s;
 }
 
 
 .nummers label:hover {
     background: white;
+
     color: black;
 }
 
 
 /* Actieve knop */
+
 #project1:checked ~ .carousel-links .nummers label[for="project1"],
 #project2:checked ~ .carousel-links .nummers label[for="project2"],
 #project3:checked ~ .carousel-links .nummers label[for="project3"],
 #project4:checked ~ .carousel-links .nummers label[for="project4"] {
+
     background: white;
+
     color: black;
 }
 
 
+/* =========================================================
+   INFORMATIE
+========================================================= */
 
-/* Informatie */
 .info {
     display: none;
 }
@@ -502,13 +572,105 @@
 
 .informatie p {
     line-height: 1.7;
+
     padding: 10px;
+
+    box-sizing: border-box;
 }
 
 
+/* =========================================================
+   VIDEO'S
+========================================================= */
 
-/* Tablet */
+.videos-onderelkaar {
+    display: flex;
+
+    flex-direction: column;
+
+    gap: 20px;
+
+    width: 100%;
+}
+
+
+.videos video {
+    width: min(100%, 1200px);
+
+    height: auto;
+
+    display: block;
+}
+
+
+.video-grid {
+    display: grid;
+
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+
+    gap: clamp(10px, 2vw, 20px);
+
+    width: 100%;
+}
+
+
+.video-grid video {
+    width: 100%;
+
+    height: auto;
+
+    display: block;
+}
+
+
+/* =========================================================
+   LAPTOP / KLEINERE MONITOR
+   Maximaal 900px
+========================================================= */
+
 @media (max-width: 900px) {
+
+    /* Project waaier */
+
+    .project-waaier {
+        flex-direction: column;
+
+        justify-content: center;
+
+        text-align: center;
+
+        width: 90%;
+
+        gap: 3rem;
+    }
+
+
+    .poster-stack {
+        width: min(70vw, 350px);
+    }
+
+
+    .Socialemedia-borboleta-content {
+        width: 100%;
+
+        text-align: center;
+
+        padding: 0;
+    }
+
+
+    /* Promotie gallery */
+
+    .gallery-promotie {
+        width: 90%;
+
+        max-width: 700px;
+
+        gap: 16px;
+    }
+
+
+    /* Portfolio */
 
     .portfolio-carousel {
         gap: 2rem;
@@ -522,20 +684,60 @@
 }
 
 
+/* =========================================================
+   TABLET
+   Maximaal 768px
+========================================================= */
 
-/* Telefoon */
-@media (max-width: 700px) {
+@media (max-width: 768px) {
+
+    /* Cards */
+
+    .cards-display {
+        grid-template-columns:
+            repeat(2, minmax(0, 1fr));
+
+        gap: 20px;
+
+        padding: 10px;
+    }
+
+
+    /* Videos */
+
+    .videos {
+        width: 100%;
+    }
+
+
+    .videos video {
+        width: 100%;
+    }
+
+
+    .video-grid {
+        grid-template-columns: 1fr;
+    }
+
+
+    /* Portfolio */
 
     .portfolio-carousel {
         flex-direction: column;
+
         text-align: center;
+
         gap: 3rem;
+
+        width: 92%;
     }
 
 
     .carousel-links,
     .informatie {
         width: 100%;
+
+        flex: none;
     }
 
 
@@ -561,46 +763,428 @@
 
 }
 
-.videos-onderelkaar {
-    display: flex;
-    flex-direction: column;
-    gap: 20px;
-}
 
-.videos video {
-    width: 200px;
-    max-width: 1200px;
-    height: auto;
-}
+/* =========================================================
+   TELEFOON
+   Maximaal 600px
+========================================================= */
+
+@media (max-width: 600px) {
+
+    /* =====================================================
+       ALGEMENE RESPONSIVE INSTELLINGEN
+    ===================================================== */
+
+    * {
+        box-sizing: border-box;
+    }
 
 
+    /* =====================================================
+       CARDS
+    ===================================================== */
 
-/* Mobiele weergave */
-@media (max-width: 768px) {
+    .cards-display {
+        grid-template-columns: 1fr;
 
-    .videos {
+        width: 100%;
+
+        padding: 10px 15px;
+
+        gap: 20px;
+    }
+
+
+    .cards {
         width: 100%;
     }
+
+
+    /* =====================================================
+       BUTTONS
+    ===================================================== */
+
+    .btn {
+        width: auto;
+
+        max-width: 100%;
+
+        padding:
+            10px
+            18px;
+
+        font-size: 15px;
+    }
+
+
+    /* =====================================================
+       SOCIALS
+    ===================================================== */
+
+    .socials-connect {
+        grid-template-columns: 1fr;
+
+        width: 90%;
+
+        gap: 15px;
+    }
+
+
+    .socials-connect li {
+        padding: 15px;
+    }
+
+
+    /* =====================================================
+       GALLERY
+    ===================================================== */
+
+    .gallery-grid {
+        width: 100%;
+
+        padding: 10px;
+
+        column-width: auto;
+
+        column-count: 1;
+    }
+
+
+    .gallery-grid img {
+        margin-bottom: 12px;
+    }
+
+
+    /* =====================================================
+       PROJECT WAAIER
+       
+       BELANGRIJK:
+       Op mobiel wordt de waaier volledig uitgezet.
+       Alle posters komen onder elkaar.
+    ===================================================== */
+
+    .project-waaier {
+        width: 92%;
+
+        margin:
+            3rem auto;
+
+        display: flex;
+
+        flex-direction: column;
+
+        align-items: center;
+
+        justify-content: center;
+
+        gap: 2rem;
+
+        text-align: center;
+    }
+
+
+    /*
+
+       De poster-stack is op mobiel geen
+       positionele waaier meer.
+
+    */
+
+    .poster-stack {
+        position: static;
+
+        width: 100%;
+
+        max-width: 320px;
+
+        height: auto;
+
+        aspect-ratio: auto;
+
+        display: flex;
+
+        flex-direction: column;
+
+        align-items: center;
+
+        gap: 20px;
+    }
+
+
+    /*
+       Alle posters worden normale elementen.
+       Hierdoor staan ze onder elkaar.
+    */
+
+    .poster {
+        position: relative;
+
+        top: auto;
+        left: auto;
+
+        width: 100%;
+
+        max-width: 280px;
+
+        height: auto;
+
+        aspect-ratio: auto;
+
+        object-fit: contain;
+
+        transform: none !important;
+
+        z-index: auto;
+
+        border-radius: 12px;
+
+        box-shadow:
+            0 8px 20px rgba(0, 0, 0, .15);
+    }
+
+
+    /*
+       De desktop waaier-posities worden
+       volledig gereset op mobiel.
+    */
+
+    .p1,
+    .p2,
+    .p3,
+    .p4 {
+        position: relative;
+
+        top: auto;
+        left: auto;
+
+        transform: none !important;
+
+        z-index: auto;
+    }
+
+
+    /*
+       Geen vergrote posters bij aanraken.
+       Dit voorkomt onhandig gedrag op touchscreen.
+    */
+
+    .poster:hover {
+        transform: none !important;
+
+        box-shadow:
+            0 8px 20px rgba(0, 0, 0, .15);
+    }
+
+
+    /* =====================================================
+       BORBOLETA CONTENT
+    ===================================================== */
+
+    .Socialemedia-borboleta-content {
+        width: 100%;
+
+        text-align: center;
+
+        padding: 0;
+    }
+
+
+    .Socialemedia-borboleta-content p {
+        line-height: 1.6;
+    }
+
+
+    /* =====================================================
+       PROMOTIE GALLERY
+    ===================================================== */
+
+    .gallery-promotie {
+        grid-template-columns: 1fr;
+
+        grid-template-rows: auto;
+
+        width: 92%;
+
+        gap: 15px;
+
+        margin-bottom: 3rem;
+    }
+
+
+    .gallery-promotie img:first-child {
+        grid-row: auto;
+    }
+
+
+    .gallery-promotie img {
+        height: auto;
+
+        aspect-ratio: auto;
+    }
+
+
+    .borboleta-promotie-content {
+        text-align: center;
+    }
+
+
+    /* =====================================================
+       PORTFOLIO CAROUSEL
+    ===================================================== */
+
+    .portfolio-carousel {
+        flex-direction: column;
+
+        width: 92%;
+
+        margin: 3rem auto;
+
+        gap: 2rem;
+
+        text-align: center;
+    }
+
+
+    .carousel-links,
+    .informatie {
+        width: 100%;
+
+        flex: none;
+    }
+
+
+    .images {
+        width: min(85vw, 300px);
+
+        margin: 0 auto;
+    }
+
+
+    .informatie {
+        text-align: left;
+    }
+
+
+    .informatie p {
+        padding: 5px 0;
+    }
+
+
+    /* =====================================================
+       NUMMERKNOPPEN
+    ===================================================== */
+
+    .nummers {
+        display: flex;
+
+        justify-content: center;
+
+        flex-wrap: wrap;
+
+        gap: 5px;
+
+        width: 100%;
+
+        margin-top: 1rem;
+    }
+
+
+    .nummers label {
+        width: 36px;
+
+        height: 36px;
+
+        margin: 3px;
+
+        flex-shrink: 0;
+    }
+
+
+    /* =====================================================
+       VIDEO'S
+    ===================================================== */
+
+    .videos-onderelkaar {
+        width: 100%;
+
+        gap: 15px;
+    }
+
 
     .videos video {
         width: 100%;
+
+        max-width: 100%;
+
+        height: auto;
     }
 
-}
 
-.video-grid {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    gap: 20px; 
-}
-
-.video-grid video {
-    width: 100%;
-    height: auto;
-}
-
-@media (max-width: 768px) {
     .video-grid {
         grid-template-columns: 1fr;
+
+        gap: 15px;
     }
+
+
+    .video-grid video {
+        width: 100%;
+
+        height: auto;
+    }
+
 }
+
+
+/* =========================================================
+   EXTRA KLEINE TELEFOONS
+   Bijvoorbeeld 320px - 400px
+========================================================= */
+
+@media (max-width: 400px) {
+
+    .cards-display {
+        padding:
+            10px;
+    }
+
+
+    .project-waaier {
+        width: 94%;
+    }
+
+
+    .poster-stack {
+        max-width: 280px;
+    }
+
+
+    .poster {
+        max-width: 250px;
+    }
+
+
+    .images {
+        width: min(85vw, 270px);
+    }
+
+
+    .nummers label {
+        width: 34px;
+
+        height: 34px;
+
+        font-size: 14px;
+    }
+
+
+    .btn {
+        padding:
+            9px
+            15px;
+
+        font-size: 14px;
+    }
+
+}
+
