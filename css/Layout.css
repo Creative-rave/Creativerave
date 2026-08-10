@@ -1,0 +1,532 @@
+.hero-content {
+    text-align: right;
+    padding-top: 100px; 
+    width: 100%;
+    color: var(--white);
+}
+
+.project-content {
+    text-align: center;
+    padding: 10px 0 10px 0;
+    color: var(--white);
+}
+
+.project-content h1 {
+    padding: 10px;
+    font-size: var(--title-h1);
+}
+
+.project-content h3 {
+    padding: 0 0 20px 0;
+    font-size: var(--title-h3);
+}
+
+.project-content  h4{
+    font-size: var(--title-h4);
+    text-align: right;
+    padding-top: 25px;
+}
+.cards h3 {
+    margin: 10px 0 5px 0;
+}
+
+.cards p {
+    margin: 0 5px 15px 5px;
+}
+
+.cards-content {
+    background:black;
+    padding:30px;
+    text-align:center;  
+}
+
+.about-content {
+    width:80%;
+    line-height: 1.5;
+    color: var(--white);
+}
+
+.about-content p {
+    padding: 5px;
+    line-height: 1.3;
+}
+
+.footer-content {
+    text-align: center;
+    color: var(--white);
+}
+
+.connect {
+    text-align: center;
+    color: var(--white);
+    padding: 50px;
+}
+
+.Hero-RM-content {
+   flex: 1;
+    max-width: 650px;
+    color: var(--white);
+    margin: auto;
+    text-align: center;
+   
+}
+
+.Hero-RM-content h1{
+    font-size:clamp(40px,6vw,90px);
+    padding-bottom: 10px;
+}
+
+.verslag-content{
+   display:flex;
+    align-items:center;
+    justify-content:space-between;
+    gap:clamp(30px,6vw,80px);
+    margin-block:clamp(50px,8vw,100px);
+}
+
+.verslag-fotocontainer {
+    flex: 1;
+    position: relative;
+    width: 100%;
+    max-width: 900px;
+    aspect-ratio: 9/7;
+    margin: 0 auto;
+    overflow: visible;
+}
+
+.verslag-tekst {
+    flex: 1;
+    max-width: 650px;
+    color: var(--white);
+    margin: 0;
+    text-align: left;
+    
+}
+
+.verslag-tekst h2 {
+    font-size:var(--title-H2);
+    line-height:1.2;
+    margin-bottom:20px;
+}
+
+.verslag-tekst h3 {
+    font-size:var(--title-H3);
+    margin-bottom:20px;
+}
+
+.verslag-tekst p {
+    font-size:clamp(16px,1.5vw,20px);
+    line-height:1.7;
+    margin-bottom:20px;
+}
+
+@media(max-width:768px){
+
+    .verslag-tekst{
+
+        max-width:100%;
+
+        text-align:center;
+
+    }
+
+}
+
+
+.verslag-tekst p {
+    padding: 0 0 10px 0;
+}
+
+.verslag-tekst h3 {
+    padding:10px 0;
+}
+.foto {
+    width: 48%;
+    height: auto;
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.3);
+    flex: 1;
+}
+
+.foto1 {
+    position: absolute;
+    left: 0;
+    top: 30px;
+    z-index: 1;
+
+    transition: all 0.3s ease;
+}
+
+.foto2 {
+    position: absolute;
+    left: 38%;  
+    top: 0;
+    z-index: 2; 
+
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.3);
+
+    transition: all 0.3s ease;
+    cursor: pointer;
+}
+
+.foto1:hover {
+    z-index: 10;
+    transform: scale(1.15);
+}
+
+.foto2:hover {
+    z-index: 10;
+    transform: scale(1.15);
+}
+
+@media (max-width: 768px){
+
+    .verslag-content{
+
+        flex-direction:column;
+
+        gap:40px;
+
+        text-align:center;
+
+    }
+
+}
+
+@media (max-width:768px){
+
+    .Verslag-fotocontainer{
+
+        max-width:350px;
+
+        aspect-ratio:1/1;
+
+    }
+
+    .foto{
+
+        width:65%;
+
+    }
+
+    .foto1{
+
+        left:0;
+
+        top:30px;
+
+    }
+
+    .foto2{
+
+        left:35%;
+
+        top:0;
+
+    }
+
+}
+
+@media (max-width:768px){
+
+    .verslag-content{
+
+        flex-direction:column;
+
+        gap:40px;
+
+        align-items:center;
+
+    }
+
+    .verslag-tekst{
+
+        max-width:100%;
+
+        padding:20px;
+
+        text-align:center;
+
+    }
+
+}
+
+.fotografie-RM {
+     width: 100%;
+    max-width: 1200px;
+    height: auto;
+    margin: auto;
+    line-height: 1.8;
+    text-align: center;
+    color: var(--white);
+    padding: 25px;
+}
+
+.Grafisch-RM{
+    flex:1;
+    max-width:650px;
+    color: var(--white);
+}
+
+.Grafisch-RM h2{
+    font-size:var(--title-H2);
+    margin-bottom:20px;
+     color: var(--white);
+
+}
+
+.Grafisch-RM p{
+    font-size:var(--text-P);
+    line-height:1.7;
+    margin-bottom:20px;
+     color: var(--white);
+
+}
+
+.video-project {
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+    gap:clamp(30px,5vw,60px);
+    max-width:1200px;
+    width:90%;
+    margin:clamp(50px,8vw,80px) auto;
+}
+
+.video-gallery {
+    width:100%;
+    flex: 1;
+    max-width:650px;
+    display:grid;
+    
+    grid-template-columns:repeat(2,1fr);
+}
+
+.video-gallery video {
+    width:100%;
+    height:auto;
+    display:block;
+    padding: 10px;
+    border-radius: 10px;
+}
+
+.video-main {
+    grid-column: span 2;
+   
+}
+
+.mixmedia-RM {
+    flex:1;
+    max-width:650px;
+    text-align:right;
+    color: var(--white);
+    padding: 25px;
+}
+
+@media (max-width:768px){
+
+    .video-project{
+
+        flex-direction:column;
+
+        gap:40px;
+
+    }
+
+    .mixmedia-RM{
+
+        max-width:100%;
+
+        text-align:center;
+
+    }
+
+    .video-gallery{
+
+        grid-template-columns:1fr;
+
+    }
+
+    .video-main{
+
+        grid-column:span 1;
+
+    }
+
+}
+
+.hero-borboleta-content {
+    color: var(--white);
+    text-align: center;
+}
+.hero-borboleta-content H3 {
+    padding: 25px;
+}
+
+.borboleta-intro {
+    margin-bottom: 2rem;
+    padding:100px 0 50px 0;
+    text-align: left;
+    color: var(--white);
+}
+
+.borboleta-intro p {
+    padding-bottom: 15px;
+}
+
+.portfolio {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+}
+
+.portfolio-item {
+    text-align: center;
+    color: var(--white);
+}
+
+.portfolio img {
+    width: 100%;
+    height: auto;
+    display: block;
+    border-radius: 10px;
+}
+
+.portfolio-item p {
+    margin-top: 0.75rem;
+}
+
+@media (max-width: 900px) {
+    .portfolio {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 600px) {
+    .portfolio {
+        grid-template-columns: 1fr;
+        gap: 25px;
+    }
+
+    .borboleta-intro {
+        text-align: center;
+    }
+}
+
+.borboleta-promotie-content-bg {
+    background-color: var(--gray);
+    padding: 60px;
+}
+
+
+.borboleta-promotie-content {
+    margin-bottom: 3rem;
+    padding: 10px;
+    text-align: center;
+    color: var(--white);
+}
+
+.borboleta-container-promotie {
+      text-align: center;
+    color: var(--white);
+}
+
+.mixmedia-Borboleta{
+    flex:1;
+    max-width:650px;
+    text-align:right;
+    color: var(--white);
+    padding: 10px;
+}
+
+.Hero-ontwikkeling-content {
+   text-align: center; 
+   color: var(--white);
+   padding: 15px;  
+}
+.Hero-ontwikkeling-content h2 {
+    padding: 25px;
+}
+
+.Mijn-ontwikkeling-grafisch p {
+    padding: 0 0 10px 0;
+}
+
+@media(max-width:768px){
+
+    .Mijn-ontwikkeling-grafisch{
+        padding:0;
+    }
+
+}
+
+.fotografie-own {
+    width: 100%;
+    max-width: 1000px;
+    height: auto;
+    margin: auto;
+    line-height: 1.8;
+    text-align: center;
+    color: var(--white);
+    padding: 25px;
+}
+
+.mixedmedia-own {
+    color: white;
+    align-items: center;
+    text-align: left;
+    width: 800px;
+    line-height: 1.8;
+    padding: 75px 0px 50px 0px;
+}
+
+.afbeelding-rechts {
+    display: flex;
+    flex-direction: row-reverse;
+    align-items: center;
+    gap: 20px;
+    margin-bottom: 75px;
+}
+
+.afbeelding-rechts img {
+    width: 50%;
+    height: auto;
+    max-width: 600px;
+}
+
+.afbeelding-links {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    margin-bottom: 75px;
+    padding: 100px 0 0 0;
+}
+
+.afbeelding-links img {
+    width: 75%;
+    height: auto;
+    max-width: 600px;
+}
+
+.text-left {
+    color: var(--white);
+    text-align: left;
+    padding: 50px 0 25px 0;
+    flex:1;
+    max-width:650px;
+    color: var(--white);
+}
+
+.text-left p {
+    padding: 20px 0 20px 0;
+}
+
+
+.text-center {
+    color: var(--white);
+    text-align: center;
+    padding: 50px 0 25px 0;
+    max-width: 650px;
+    margin: 0 auto;
+}

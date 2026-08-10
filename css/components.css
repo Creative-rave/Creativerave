@@ -1,0 +1,606 @@
+.cards-display {
+    display: grid;
+    grid-template-columns: repeat(auto-fit,minmax(280px,1fr));
+    gap: 30px;
+    align-items: stretch;
+    padding: 10px;
+}
+
+.cards {
+  background: white;
+  width: 100%;
+  height: auto;
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 10%;
+  text-decoration: none;
+  color: var(--inkt);
+  transition: transform var(--overgang), box-shadow var(--overgang);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+.cards:hover {
+    transform:translateY(-5px);
+    box-shadow: 0 20px 40px rgba(89, 47, 51, 1);
+}
+
+.btn {
+    display:inline-block;
+    padding: 8px 20px;
+    border-radius: 10px;
+    font-size: clamp (14px,1.2vw,18px);
+    transition: 0.3s;
+    cursor: pointer;
+    margin-top: 15px;
+    text-decoration: none;
+}
+
+.btn-pink {
+    background-color: var(--pink);
+    color: var(--white);
+}
+
+.btn-white {
+    background-color: var(--white);
+    color: var(--black);
+    
+}
+
+.btn:hover {
+    transform: scale(1.1);
+}
+
+.socials-connect {
+    grid-template-columns: repeat(3, 1fr);
+   align-items: center;
+   text-align: center;
+   gap: 20px;
+   width: 500px;
+   line-height: 1.5;
+   list-style: none;
+   display: grid;
+   margin: 25px auto; 
+  
+}
+
+.socials-connect li {
+    background-color: #fff;
+    padding: 10px; 
+    border-radius: 15px;
+    text-align: center; 
+}
+
+.socials-connect a {
+    text-decoration: none;
+}
+
+.socials span {
+   display: block;
+   
+}
+
+.socials-kanaal {
+    display:block;
+    font-weight:bold;
+    color:#592f33;
+    margin-bottom:5px;
+   
+}
+
+.socials-naam {
+    font-weight: lighter;
+    color:#d36e70;
+    text-decoration: none;
+}
+
+.socials-connect li:hover {
+    transform: scale(1.1);
+}
+
+.gallery-grid {
+    max-width: 1200px;
+    width: 100%;
+    margin: 0 auto;
+    padding: 20px;
+
+    column-width: 320px;
+    column-gap: 15px;
+}
+
+.gallery-grid img {
+    display: block;
+    width: 100%;
+    height: auto;
+
+    margin-bottom: 15px;
+    border-radius: 10px;
+
+    break-inside: avoid;
+    -webkit-column-break-inside: avoid;
+    page-break-inside: avoid;
+}
+
+
+.project-waaier{
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+    gap:clamp(2rem,4vw,4rem);
+
+    width:min(1100px,90%);
+    margin:clamp(4rem,8vw,6rem) auto;
+
+    flex-wrap:wrap;
+}
+
+
+.poster-stack{
+    position:relative;
+
+    width:clamp(240px,32vw,420px);
+    aspect-ratio:3 / 4;
+
+    flex-shrink:0;
+}
+
+
+
+.poster{
+    position:absolute;
+
+    width:78%;
+    height:90%;
+
+    object-fit:contain;
+
+    border-radius:14px;
+
+    background:var(--gray);
+
+    box-shadow:0 12px 30px rgba(0,0,0,.18);
+
+    transition:
+        transform .35s ease,
+        box-shadow .35s ease;
+
+    display:block;
+}
+
+
+
+.p1{
+    top:0;
+    left:0;
+    transform:rotate(-8deg);
+    z-index:1;
+}
+
+.p2{
+    top:6%;
+    left:12%;
+    transform:rotate(2deg);
+    z-index:2;
+}
+
+.p3{
+    top:12%;
+    left:24%;
+    transform:rotate(8deg);
+    z-index:3;
+}
+
+.p4{
+    top:18%;
+    left:36%;
+    transform:rotate(-4deg);
+    z-index:4;
+}
+
+
+/* ===========================
+   HOVER ALLEEN VOOR MUIS
+=========================== */
+
+@media (hover:hover){
+
+    .poster:hover{
+        transform:
+            scale(1.12)
+            rotate(0deg);
+
+        z-index:20;
+
+        box-shadow:
+            0 20px 45px rgba(0,0,0,.25);
+    }
+
+}
+
+
+@media(max-width:700px){
+
+    .project-waaier{
+        justify-content:center;
+    }
+
+
+    .poster-stack{
+        width:min(90vw,350px);
+    }
+
+
+    .poster{
+        width:82%;
+        height:85%;
+    }
+
+}
+
+
+
+
+
+
+.Socialemedia-borboleta-content {
+    flex: 1;
+    color: var(--white);
+}
+
+.Socialemedia-borboleta-content h2 {
+    margin-bottom: 1rem;
+}
+
+.Socialemedia-borboleta-content p {
+    line-height: 1.7;
+}
+
+@media (max-width: 900px) {
+
+    .project-waaier {
+        flex-direction: column;
+        text-align: center;
+        gap: 3rem;
+    }
+
+    .Socialemedia-borboleta-content {
+        text-align: center;
+        padding: 0;
+    }
+
+}
+@media (max-width: 600px) {
+
+    .project-waaier {
+        width: 92%;
+        margin: 3rem auto;
+    }
+
+    .poster-stack {
+        width: 260px;
+        height: 350px;
+    }
+
+    .poster {
+        width: 210px;
+    }
+
+    .p2 {
+        top: 14px;
+        left: 20px;
+    }
+
+    .p3 {
+        top: 28px;
+        left: 40px;
+    }
+
+    /* Minder grote hover-animatie op mobiel */
+    .poster-stack:hover .p1 {
+        transform: translateX(-25px) rotate(-8deg);
+    }
+
+    .poster-stack:hover .p2 {
+        transform: translateY(-10px);
+    }
+
+    .poster-stack:hover .p3 {
+        transform: translateX(25px) rotate(8deg);
+    }
+
+}
+
+.gallery-promotie {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: repeat(2, 1fr);
+    gap: 20px;
+
+    max-width: 900px;
+    margin: 0 auto 5rem;
+}
+
+.gallery-promotie img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+    border-radius: 12px;
+}
+
+.gallery-promotie img:first-child {
+    grid-row: 1 / 3;
+}
+
+@media (max-width: 900px) {
+
+    .gallery-promotie {
+        max-width: 700px;
+        gap: 16px;
+    }
+
+}
+@media (max-width: 600px) {
+
+    .gallery-promotie {
+        grid-template-columns: 1fr;
+        grid-template-rows: auto;
+    }
+
+    .gallery-promotie img:first-child {
+        grid-row: auto;
+    }
+
+    .gallery-promotie img {
+        height: auto;
+    }
+
+    .borboleta-promotie-content {
+        text-align: center;
+    }
+
+}
+
+/* Hoofd container */
+.portfolio-carousel {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 4rem;
+
+    max-width: 1200px;
+    width: 90%;
+    margin: 5rem auto;
+}
+
+
+/* Radio buttons verbergen */
+.portfolio-carousel input {
+    display: none;
+}
+
+
+/* Linker en rechter kant */
+.carousel-links,
+.informatie {
+    flex: 1;
+    color: var(--white);
+}
+
+
+/* Poster gedeelte */
+.images {
+    position: relative;
+    width: clamp(240px, 30vw, 350px);
+    aspect-ratio: 7 / 10;
+    margin: 0 auto;
+}
+
+
+.image {
+    position: absolute;
+    inset: 0;
+    display: none;
+}
+
+
+.image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+
+    border-radius: 12px;
+    display: block;
+
+    transition: transform .3s ease;
+}
+
+
+.image img:hover {
+    transform: scale(1.03);
+}
+
+
+/* Actieve poster */
+#project1:checked ~ .carousel-links .image1,
+#project2:checked ~ .carousel-links .image2,
+#project3:checked ~ .carousel-links .image3,
+#project4:checked ~ .carousel-links .image4 {
+    display: block;
+}
+
+
+/* Nummer navigatie */
+.nummers {
+    margin-top: 1.5rem;
+    text-align: center;
+}
+
+
+.nummers label {
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+
+    width: 40px;
+    height: 40px;
+
+    margin: .4rem;
+
+    border-radius: 50%;
+
+    background: #444;
+    color: white;
+
+    cursor: pointer;
+    transition: .3s;
+}
+
+
+.nummers label:hover {
+    background: white;
+    color: black;
+}
+
+
+/* Actieve knop */
+#project1:checked ~ .carousel-links .nummers label[for="project1"],
+#project2:checked ~ .carousel-links .nummers label[for="project2"],
+#project3:checked ~ .carousel-links .nummers label[for="project3"],
+#project4:checked ~ .carousel-links .nummers label[for="project4"] {
+    background: white;
+    color: black;
+}
+
+
+
+/* Informatie */
+.info {
+    display: none;
+}
+
+
+#project1:checked ~ .informatie .info1,
+#project2:checked ~ .informatie .info2,
+#project3:checked ~ .informatie .info3,
+#project4:checked ~ .informatie .info4 {
+    display: block;
+}
+
+
+.informatie h2 {
+    margin-bottom: 1rem;
+}
+
+
+.informatie h3 {
+    line-height: 1.5;
+}
+
+
+.informatie p {
+    line-height: 1.7;
+    padding: 10px;
+}
+
+
+
+/* Tablet */
+@media (max-width: 900px) {
+
+    .portfolio-carousel {
+        gap: 2rem;
+    }
+
+
+    .images {
+        width: 280px;
+    }
+
+}
+
+
+
+/* Telefoon */
+@media (max-width: 700px) {
+
+    .portfolio-carousel {
+        flex-direction: column;
+        text-align: center;
+        gap: 3rem;
+    }
+
+
+    .carousel-links,
+    .informatie {
+        width: 100%;
+    }
+
+
+    .images {
+        width: min(90vw, 320px);
+    }
+
+
+    .informatie {
+        text-align: left;
+    }
+
+
+    .nummers {
+        width: 100%;
+    }
+
+
+    .nummers label {
+        width: 38px;
+        height: 38px;
+    }
+
+}
+
+.videos-onderelkaar {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.videos video {
+    width: 200px;
+    max-width: 1200px;
+    height: auto;
+}
+
+
+
+/* Mobiele weergave */
+@media (max-width: 768px) {
+
+    .videos {
+        width: 100%;
+    }
+
+    .videos video {
+        width: 100%;
+    }
+
+}
+
+.video-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px; 
+}
+
+.video-grid video {
+    width: 100%;
+    height: auto;
+}
+
+@media (max-width: 768px) {
+    .video-grid {
+        grid-template-columns: 1fr;
+    }
+}
