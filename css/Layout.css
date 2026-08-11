@@ -8,19 +8,9 @@ css
     max-width: 600px;
     padding-top: 100px;
     color: var(--white);
-}
-
-.hero-content h1 {
-    padding: 10px;
-    font-size: var(--title-H1);
     text-align: right;
 }
 
-.hero-content h3 {
-    padding: 0 0 10px;
-    font-size: var(--title-H3);
-    text-align: right;
-}
 
 .project-content {
     width: 100%;
