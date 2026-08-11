@@ -11,6 +11,11 @@ css
     text-align: right;
 }
 
+.hero-bg .container {
+    display: flex;
+    justify-content: flex-end;
+}
+
 
 .project-content {
     width: 100%;
