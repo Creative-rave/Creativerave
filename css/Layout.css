@@ -1,4 +1,3 @@
-css
 /* =========================================================
    ALGEMENE CONTENT
 ========================================================= */
@@ -15,7 +14,6 @@ css
     display: flex;
     justify-content: flex-end;
 }
-
 
 .project-content {
     width: 100%;
@@ -150,10 +148,6 @@ css
 
 /* =========================================================
    WAAIER
-   Alleen desktop.
-
-   Op tablet en telefoon wordt dit hieronder
-   automatisch omgezet naar normale afbeeldingen.
 ========================================================= */
 
 .foto {
@@ -488,19 +482,10 @@ css
 
 @media (max-width: 1024px) {
 
-    /* -----------------------------------------
-       VERSLAG
-    ----------------------------------------- */
-
     .verslag-content {
         flex-direction: column;
         gap: 45px;
     }
-
-    /*
-       Waaier uitschakelen.
-       Foto's worden normale afbeeldingen.
-    */
 
     .verslag-fotocontainer {
         position: static;
@@ -520,11 +505,9 @@ css
         width: 48%;
         max-width: 330px;
         height: auto;
-
         left: auto;
         top: auto;
         z-index: auto;
-
         transform: none;
         cursor: default;
     }
@@ -541,20 +524,10 @@ css
         text-align: center;
     }
 
-
-    /* -----------------------------------------
-       PORTFOLIO
-    ----------------------------------------- */
-
     .portfolio {
         grid-template-columns: repeat(2, 1fr);
         gap: 25px;
     }
-
-
-    /* -----------------------------------------
-       AFBEELDING + TEKST
-    ----------------------------------------- */
 
     .afbeelding-rechts,
     .afbeelding-links {
@@ -565,11 +538,6 @@ css
     .afbeelding-links img {
         max-width: 450px;
     }
-
-
-    /* -----------------------------------------
-       VIDEO
-    ----------------------------------------- */
 
     .video-project {
         flex-direction: column;
@@ -587,20 +555,10 @@ css
         text-align: center;
     }
 
-
-    /* -----------------------------------------
-       MIXED MEDIA
-    ----------------------------------------- */
-
     .mixedmedia-own {
         width: 100%;
         max-width: 750px;
     }
-
-
-    /* -----------------------------------------
-       PROMOTIE
-    ----------------------------------------- */
 
     .borboleta-promotie-content-bg {
         padding: 50px 30px;
@@ -611,6 +569,8 @@ css
 /* =========================================================
    TELEFOON
    768px en kleiner
+
+   HERO WORDT HIER VOLLEDIG GECENTREERD
 ========================================================= */
 
 @media (max-width: 768px) {
@@ -619,8 +579,17 @@ css
        HERO / CONTENT
     ----------------------------------------- */
 
+    .hero-bg .container {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
     .hero-content {
+        width: 100%;
+        max-width: 600px;
         padding: 50px 15px 0;
+        margin: 0 auto;
         text-align: center;
     }
 
@@ -662,21 +631,14 @@ css
         margin-block: 50px;
     }
 
-    /*
-       WAAIER VOLLEDIG UIT.
-    */
-
     .verslag-fotocontainer {
         position: static;
         display: flex;
         flex-direction: column;
         align-items: center;
-
         width: 100%;
         max-width: 500px;
-
         aspect-ratio: auto;
-
         gap: 20px;
     }
 
@@ -684,15 +646,12 @@ css
     .foto1,
     .foto2 {
         position: static;
-
         width: 100%;
         max-width: 500px;
         height: auto;
-
         left: auto;
         top: auto;
         z-index: auto;
-
         transform: none;
         cursor: default;
     }
@@ -742,6 +701,7 @@ css
     .Grafisch-RM {
         width: 100%;
         max-width: 650px;
+        text-align: center;
     }
 
     .Grafisch-RM h2 {
@@ -806,7 +766,7 @@ css
 
 
     /* -----------------------------------------
-       PORTFOLIO / CAROUSEL
+       PORTFOLIO
     ----------------------------------------- */
 
     .portfolio {
@@ -822,10 +782,6 @@ css
 
     .portfolio-item a {
         display: block;
-
-        /*
-         * Zorgt voor een duidelijk klikbaar gebied.
-         */
         min-height: 44px;
     }
 
@@ -833,10 +789,6 @@ css
         width: 100%;
         height: auto;
     }
-
-    /*
-       Op touch-apparaten geen hover-zoom.
-    */
 
     .portfolio-item a:hover img {
         transform: none;
@@ -912,9 +864,7 @@ css
         flex-direction: column;
         align-items: center;
         gap: 25px;
-
         width: 100%;
-
         margin-bottom: 50px;
         padding-top: 40px;
     }
@@ -962,7 +912,15 @@ css
 @media (max-width: 480px) {
 
     .hero-content {
+        width: 100%;
+        max-width: 600px;
         padding: 35px 10px 0;
+        margin: 0 auto;
+        text-align: center;
+    }
+
+    .hero-bg .container {
+        justify-content: center;
     }
 
     .project-content {
@@ -1101,8 +1059,6 @@ css
 
 /* =========================================================
    TOUCH DEVICES
-   Geen hover-effecten die op een telefoon/tablet
-   blijven hangen na aanraken.
 ========================================================= */
 
 @media (hover: none) and (pointer: coarse) {
@@ -1114,4 +1070,3 @@ css
         z-index: auto;
     }
 }
-

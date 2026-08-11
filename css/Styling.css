@@ -167,6 +167,11 @@ p {
     padding: 100px 20px;
 }
 
+.hero-bg .container {
+    display: flex;
+    justify-content: flex-end;
+}
+
 .projecten-bg {
     padding: 60px 20px;
     background-image:
