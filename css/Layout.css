@@ -1088,7 +1088,32 @@
     ----------------------------------------- */
 
     .mixedmedia-own {
-        padding: 30px 10px;
+        width: 100%;
+        max-width: 650px;
+        padding: 40px 15px;
+        text-align: center;
+        box-sizing: border-box;
+    }
+
+    .mixedmedia-own h2 {
+        font-size: 24px;
+    }
+
+    .mixedmedia-own p {
+        font-size: 15px;
+        line-height: 1.6;
+    }
+
+    .video-projects {
+        width: 100%;
+        padding: 0 15px;
+        box-sizing: border-box;
+    }
+
+    .video-projects iframe {
+        width: 100%;
+        height: auto;
+        aspect-ratio: 16 / 9;
     }
 }
 
