@@ -272,7 +272,7 @@
     display: grid;
     flex: 1;
     width: 100%;
-    max-width: 650px;
+    max-width: 750px;
     grid-template-columns: repeat(2, 1fr);
     gap: 10px;
 }
