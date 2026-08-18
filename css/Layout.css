@@ -266,6 +266,7 @@
     max-width: 1200px;
     gap: clamp(30px, 5vw, 60px);
     margin: clamp(50px, 8vw, 80px) auto;
+    padding-bottom: 50px;
 }
 
 .video-gallery {
