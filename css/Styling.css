@@ -386,8 +386,18 @@ p {
 }
 
 .fotografie-own-bg {
-    background-color: var(--gray);
+    background-image:
+        linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
+        url(../images/Shoot-bos.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover; 
     padding: 60px 20px;
+}
+
+.mixedmedia-own-bg {
+    background-color: var(--gray);
+    padding: 25px 20px;
 }
 
 /* =========================
