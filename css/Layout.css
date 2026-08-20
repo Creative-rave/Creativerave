@@ -579,7 +579,7 @@
    769px - 1024px
 ========================================================= */
 
-@media (max-width: 1024px) {
+@media (min-width: 769px) and (max-width: 1024px) {
 
     .verslag-content {
         flex-direction: column;
@@ -654,15 +654,42 @@
         text-align: center;
     }
 
-    .mixedmedia-own {
-        width: 100%;
-        max-width: 750px;
+      .mixedmedia-layout {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        gap: 30px;
+        width: 90%;
+        max-width: 950px;
+        margin: 0 auto;
     }
+
+    .video-project {
+        flex: 1.2;
+        width: 100%;
+    }
+
+    .video-project iframe {
+        width: 100%;
+        aspect-ratio: 16 / 9;
+        height: auto;
+        display: block;
+    }
+
+    .mixedmedia-own {
+        flex: 1;
+        width: 100%;
+        max-width: 450px;
+        padding: 30px 0;
+        line-height: 1.6;
+        text-align: left;
+    }
+
+}
 
     .borboleta-promotie-content-bg {
         padding: 50px 30px;
     }
-}
 
 
 /* =========================================================
@@ -946,13 +973,40 @@
        MIXED MEDIA
     ----------------------------------------- */
 
-    .mixedmedia-own {
+   .mixedmedia-layout {
+        flex-direction: column;
+        align-items: center;
+        width: 100%;
+        gap: 25px;
+        margin: 0 auto;
+    }
+
+    .video-project {
+        flex: none;
         width: 100%;
         max-width: 650px;
-        padding: 40px 15px;
+        margin: 0;
+    }
+
+    .video-project iframe {
+        width: 100%;
+        aspect-ratio: 16 / 9;
+        height: auto;
+        display: block;
+        border-radius: 10px;
+    }
+
+    .mixedmedia-own {
+        flex: none;
+        width: 100%;
+        max-width: 650px;
+        padding: 10px 15px 30px;
+        color: var(--white);
+        line-height: 1.8;
         text-align: center;
     }
 
+}
 
     /* -----------------------------------------
        AFBEELDING + TEKST
@@ -1010,7 +1064,7 @@
     .connect {
         padding: 40px 15px;
     }
-}
+
 
 
 /* =========================================================
