@@ -233,6 +233,29 @@
     margin: clamp(50px, 8vw, 80px) auto;
 }
 
+.mixedmedia-layout {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: clamp(30px, 5vw, 60px);
+    width: 90%;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.video-project {
+    flex: 1;
+    width: 100%;
+}
+
+.video-project iframe {
+    width: 100%;
+    aspect-ratio: 16 / 9;
+    border-radius: 10px;
+    display: block;
+}
+
+
 .video-gallery {
     display: grid;
     flex: 1;
