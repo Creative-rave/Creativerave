@@ -456,8 +456,8 @@
 
 .afbeelding-rechts {
     display: flex;
-    align-items: flex-start;
-    justify-content: flex-end;
+    align-items: center;
+    justify-content: space-between;
     gap: clamp(20px, 4vw, 40px);
     margin-bottom: 75px;
 }
@@ -476,15 +476,15 @@
 
 .afbeelding-links {
     display: flex;
-    align-items: flex-start;
-    justify-content: flex-start;
+    align-items: center;
+    justify-content: space-between;
     gap: clamp(20px, 4vw, 40px);
     margin-bottom: 75px;
     padding-top: 100px;
 }
 
 .afbeelding-links img {
-    width: 75%;
+    width: 50%;
     max-width: 600px;
     height: auto;
     border-radius: 10px;
@@ -496,11 +496,10 @@
 ========================================================= */
 
 .text-left {
-    width: 100%;
+    width: 50%;
     max-width: 650px;
-    margin-right: auto;
-    margin-bottom: 20px;
-    padding: 50px 0 25px;
+    margin: 0;
+    padding: 25px 0;
     color: var(--white);
     text-align: left;
 }
@@ -526,11 +525,10 @@
 ========================================================= */
 
 .text-right {
-    width: 100%;
+    width: 50%;
     max-width: 650px;
-    margin-left: auto;
-    margin-bottom: 20px;
-    padding: 50px 0 25px;
+    margin: 0;
+    padding: 25px 0;
     color: var(--white);
     text-align: right;
 }
@@ -987,31 +985,24 @@
        Daarom mag text-align hier center zijn.
     ----------------------------------------- */
 
-    .afbeelding-rechts,
+   .afbeelding-rechts,
     .afbeelding-links {
         flex-direction: column;
         align-items: center;
-        width: 100%;
-        gap: 25px;
-        margin-bottom: 50px;
-        padding-top: 40px;
     }
 
     .afbeelding-rechts img,
     .afbeelding-links img {
         width: 100%;
-        max-width: 600px;
-        height: auto;
     }
 
-    .text-left {
+     .text-left,
+    .text-right {
         width: 100%;
-        max-width: 650px;
-        margin: 0 auto;
-        margin-bottom: 20px;
-        padding: 10px 15px 30px;
         text-align: center;
+        margin: 0;
     }
+}
 
     .text-left p {
         padding: 15px 0;
@@ -1026,14 +1017,7 @@
         text-align: center;
     }
 
-    .text-right {
-        width: 100%;
-        max-width: 650px;
-        margin: 0 auto;
-        margin-bottom: 20px;
-        padding: 10px 15px 30px;
-        text-align: center;
-    }
+   
 
     .text-right p {
         padding: 15px 0;
