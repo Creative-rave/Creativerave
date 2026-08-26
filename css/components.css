@@ -61,21 +61,13 @@
 
 .btn {
     display: inline-block;
-
     padding: 8px 20px;
-
     border-radius: 10px;
-
     font-size: clamp(14px, 1.2vw, 18px);
-
     transition: .3s;
-
     cursor: pointer;
-
     margin-top: 15px;
-
     text-decoration: none;
-
     box-sizing: border-box;
 }
 
