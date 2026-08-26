@@ -499,6 +499,7 @@
     width: 100%;
     max-width: 650px;
     margin-right: auto;
+    margin-bottom: 20px;
     padding: 50px 0 25px;
     color: var(--white);
     text-align: left;
@@ -513,6 +514,7 @@
     width: 100%;
     max-width: 650px;
     margin: 0 auto;
+    margin-bottom: 20px;
     padding: 50px 0 25px;
     color: var(--white);
     text-align: center;
@@ -527,6 +529,7 @@
     width: 100%;
     max-width: 650px;
     margin-left: auto;
+    margin-bottom: 20px;
     padding: 50px 0 25px;
     color: var(--white);
     text-align: right;
@@ -1005,6 +1008,7 @@
         width: 100%;
         max-width: 650px;
         margin: 0 auto;
+        margin-bottom: 20px;
         padding: 10px 15px 30px;
         text-align: center;
     }
@@ -1017,6 +1021,7 @@
         width: 100%;
         max-width: 650px;
         margin: 0 auto;
+        margin-bottom: 20px;
         padding: 30px 15px;
         text-align: center;
     }
@@ -1025,6 +1030,7 @@
         width: 100%;
         max-width: 650px;
         margin: 0 auto;
+        margin-bottom: 20px;
         padding: 10px 15px 30px;
         text-align: center;
     }
