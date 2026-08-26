@@ -1,3 +1,4 @@
+
 /* =========================================================
    ALGEMENE CONTENT
 ========================================================= */
@@ -18,8 +19,8 @@
 .project-content {
     width: 100%;
     padding: 10px 0;
-    text-align: center;
     color: var(--white);
+    text-align: center;
 }
 
 .project-content h1 {
@@ -47,16 +48,16 @@
 }
 
 .cards-content {
-    background: var(--black);
     padding: 30px;
+    background: var(--black);
     text-align: center;
 }
 
 .about-content {
     width: 80%;
     max-width: 700px;
-    line-height: 1.5;
     color: var(--white);
+    line-height: 1.5;
 }
 
 .about-content p {
@@ -65,14 +66,14 @@
 }
 
 .footer-content {
-    text-align: center;
     color: var(--white);
+    text-align: center;
 }
 
 .connect {
     padding: 50px 20px;
-    text-align: center;
     color: var(--white);
+    text-align: center;
 }
 
 
@@ -193,9 +194,9 @@
     height: auto;
     margin: auto;
     padding: 25px;
+    color: var(--white);
     line-height: 1.8;
     text-align: center;
-    color: var(--white);
 }
 
 .Grafisch-RM {
@@ -207,15 +208,15 @@
 
 .Grafisch-RM h2 {
     margin-bottom: 20px;
-    font-size: var(--title-H2);
     color: var(--white);
+    font-size: var(--title-H2);
 }
 
 .Grafisch-RM p {
     margin-bottom: 20px;
+    color: var(--white);
     font-size: var(--text-P);
     line-height: 1.7;
-    color: var(--white);
 }
 
 
@@ -227,40 +228,27 @@
     display: flex;
     align-items: center;
     justify-content: space-between;
-    width: 90%;
+    flex: 1.5;
+    width: 100%;
     max-width: 1200px;
     gap: clamp(30px, 5vw, 60px);
     margin: clamp(50px, 8vw, 80px) auto;
-}
-
-.mixedmedia-layout {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    gap: clamp(30px, 5vw, 60px);
-    width: 90%;
-    max-width: 1200px;
-    margin: 0 auto;
-}
-
-.video-project {
-    flex: 1.5;
-    width: 100%;
+    padding-bottom: 50px;
 }
 
 .video-project iframe {
+    display: block;
     width: 100%;
     aspect-ratio: 16 / 9;
+    border: 0;
     border-radius: 10px;
-    display: block;
 }
-
 
 .video-gallery {
     display: grid;
     flex: 1;
     width: 100%;
-    max-width: 650px;
+    max-width: 750px;
     grid-template-columns: repeat(2, 1fr);
     gap: 10px;
 }
@@ -275,44 +263,6 @@
 
 .video-main {
     grid-column: span 2;
-}
-
-/* =========================================================
-   YOUTUBE SHORT
-========================================================= */
-
-.video-project {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    width: 90%;
-    max-width: 1200px;
-    gap: clamp(30px, 5vw, 60px);
-    margin: clamp(50px, 8vw, 80px) auto;
-    padding-bottom: 50px;
-}
-
-.video-gallery {
-    display: grid;
-    flex: 1;
-    width: 100%;
-    max-width: 750px;
-    grid-template-columns: repeat(2, 1fr);
-    gap: 10px;
-}
-
-.video-main {
-    grid-column: span 2;
-    width: 100%;
-    aspect-ratio: 16 / 9;
-}
-
-.video-main iframe {
-    display: block;
-    width: 100%;
-    height: 100%;
-    border: 0;
-    border-radius: 10px;
 }
 
 .youtube-short {
@@ -331,6 +281,19 @@
 }
 
 
+/* =========================================================
+   MIXED MEDIA LAYOUT
+========================================================= */
+
+.mixedmedia-layout {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 90%;
+    max-width: 1200px;
+    gap: clamp(30px, 5vw, 60px);
+    margin: 0 auto;
+}
 
 .mixmedia-RM {
     flex: 1;
@@ -340,8 +303,6 @@
     color: var(--white);
     text-align: right;
 }
-
-
 
 
 /* =========================================================
@@ -370,7 +331,11 @@
 
 .mixmedia-Borboleta {
     flex: 1;
-    max-width: 450px;
+    width: 100%;
+    max-width: 650px;
+    padding: 10px;
+    color: var(--white);
+    text-align: right;
 }
 
 
@@ -434,15 +399,6 @@
     text-align: center;
 }
 
-.mixmedia-Borboleta {
-    flex: 1;
-    width: 100%;
-    max-width: 650px;
-    padding: 10px;
-    color: var(--white);
-    text-align: right;
-}
-
 
 /* =========================================================
    ONTWIKKELING
@@ -473,8 +429,8 @@
     height: auto;
     margin: auto;
     padding: 25px;
-    line-height: 1.8;
     color: var(--white);
+    line-height: 1.8;
     text-align: center;
 }
 
@@ -500,8 +456,8 @@
 
 .afbeelding-rechts {
     display: flex;
-    justify-content: flex-end;
     align-items: flex-start;
+    justify-content: flex-end;
     gap: clamp(20px, 4vw, 40px);
     margin-bottom: 75px;
 }
@@ -520,8 +476,8 @@
 
 .afbeelding-links {
     display: flex;
-    justify-content: flex-start;
     align-items: flex-start;
+    justify-content: flex-start;
     gap: clamp(20px, 4vw, 40px);
     margin-bottom: 75px;
     padding-top: 100px;
@@ -542,16 +498,10 @@
 .text-left {
     width: 100%;
     max-width: 650px;
+    margin-right: auto;
     padding: 50px 0 25px;
-
     color: var(--white);
     text-align: left;
-
-    margin-right: auto;
-}
-
-.text-left p {
-    padding: 20px 0;
 }
 
 
@@ -562,10 +512,8 @@
 .text-center {
     width: 100%;
     max-width: 650px;
-
     margin: 0 auto;
     padding: 50px 0 25px;
-
     color: var(--white);
     text-align: center;
 }
@@ -578,16 +526,10 @@
 .text-right {
     width: 100%;
     max-width: 650px;
+    margin-left: auto;
     padding: 50px 0 25px;
-
     color: var(--white);
     text-align: right;
-
-    margin-left: auto;
-}
-
-.text-right p {
-    padding: 20px 0;
 }
 
 
@@ -597,6 +539,10 @@
 ========================================================= */
 
 @media (min-width: 769px) and (max-width: 1024px) {
+
+    /* -----------------------------------------
+       VERSLAG
+    ----------------------------------------- */
 
     .verslag-content {
         flex-direction: column;
@@ -621,11 +567,7 @@
         width: 48%;
         max-width: 330px;
         height: auto;
-        left: auto;
-        top: auto;
-        z-index: auto;
         transform: none;
-        cursor: default;
     }
 
     .foto1:hover,
@@ -640,10 +582,20 @@
         text-align: center;
     }
 
+
+    /* -----------------------------------------
+       PORTFOLIO
+    ----------------------------------------- */
+
     .portfolio {
         grid-template-columns: repeat(2, 1fr);
         gap: 25px;
     }
+
+
+    /* -----------------------------------------
+       AFBEELDINGEN
+    ----------------------------------------- */
 
     .afbeelding-rechts,
     .afbeelding-links {
@@ -655,6 +607,11 @@
         max-width: 450px;
     }
 
+
+    /* -----------------------------------------
+       VIDEO
+    ----------------------------------------- */
+
     .video-project {
         flex-direction: column;
         gap: 40px;
@@ -665,32 +622,24 @@
         max-width: 750px;
     }
 
-    .mixmedia-RM {
-        width: 100%;
-        max-width: 750px;
-        text-align: center;
-    }
 
-      .mixedmedia-layout {
+    /* -----------------------------------------
+       MIXED MEDIA
+    ----------------------------------------- */
+
+    .mixedmedia-layout {
         display: flex;
         flex-direction: row;
         align-items: center;
-        gap: 30px;
         width: 90%;
         max-width: 950px;
+        gap: 30px;
         margin: 0 auto;
     }
 
     .video-project {
         flex: 1.2;
         width: 100%;
-    }
-
-    .video-project iframe {
-        width: 100%;
-        aspect-ratio: 16 / 9;
-        height: auto;
-        display: block;
     }
 
     .mixedmedia-own {
@@ -702,24 +651,32 @@
         text-align: left;
     }
 
-}
+    .mixmedia-RM {
+        width: 100%;
+        max-width: 750px;
+        text-align: center;
+    }
+
+
+    /* -----------------------------------------
+       PROMOTIE
+    ----------------------------------------- */
 
     .borboleta-promotie-content-bg {
         padding: 50px 30px;
     }
+}
 
 
 /* =========================================================
    TELEFOON
    768px en kleiner
-
-   HERO WORDT HIER VOLLEDIG GECENTREERD
 ========================================================= */
 
 @media (max-width: 768px) {
 
     /* -----------------------------------------
-       HERO / CONTENT
+       HERO
     ----------------------------------------- */
 
     .hero-bg .container {
@@ -731,8 +688,8 @@
     .hero-content {
         width: 100%;
         max-width: 600px;
-        padding: 50px 15px 0;
         margin: 0 auto;
+        padding: 50px 15px 0;
         text-align: center;
     }
 
@@ -792,11 +749,7 @@
         width: 100%;
         max-width: 500px;
         height: auto;
-        left: auto;
-        top: auto;
-        z-index: auto;
         transform: none;
-        cursor: default;
     }
 
     .foto1:hover,
@@ -861,8 +814,8 @@
     ----------------------------------------- */
 
     .video-project {
-        width: 94%;
         flex-direction: column;
+        width: 94%;
         gap: 30px;
         margin: 50px auto;
     }
@@ -990,7 +943,7 @@
        MIXED MEDIA
     ----------------------------------------- */
 
-   .mixedmedia-layout {
+    .mixedmedia-layout {
         flex-direction: column;
         align-items: center;
         width: 100%;
@@ -998,18 +951,18 @@
         margin: 0 auto;
     }
 
-    .video-project {
+    .mixedmedia-layout .video-project {
         flex: none;
         width: 100%;
         max-width: 650px;
         margin: 0;
     }
 
-    .video-project iframe {
-        width: 100%;
-        aspect-ratio: 16 / 9;
-        height: auto;
+    .mixedmedia-layout .video-project iframe {
         display: block;
+        width: 100%;
+        height: auto;
+        aspect-ratio: 16 / 9;
         border-radius: 10px;
     }
 
@@ -1023,18 +976,20 @@
         text-align: center;
     }
 
-}
 
     /* -----------------------------------------
        AFBEELDING + TEKST
+       
+       ALLEEN MOBIEL
+       Daarom mag text-align hier center zijn.
     ----------------------------------------- */
 
     .afbeelding-rechts,
     .afbeelding-links {
         flex-direction: column;
         align-items: center;
-        gap: 25px;
         width: 100%;
+        gap: 25px;
         margin-bottom: 50px;
         padding-top: 40px;
     }
@@ -1049,6 +1004,7 @@
     .text-left {
         width: 100%;
         max-width: 650px;
+        margin: 0 auto;
         padding: 10px 15px 30px;
         text-align: center;
     }
@@ -1060,28 +1016,32 @@
     .text-center {
         width: 100%;
         max-width: 650px;
+        margin: 0 auto;
         padding: 30px 15px;
+        text-align: center;
     }
 
     .text-right {
-    width: 100%;
-    max-width: 650px;
-    padding: 10px 15px 30px;
-    text-align: center;
+        width: 100%;
+        max-width: 650px;
+        margin: 0 auto;
+        padding: 10px 15px 30px;
+        text-align: center;
     }
 
     .text-right p {
-    padding: 15px 0;
+        padding: 15px 0;
     }
 
+
     /* -----------------------------------------
-       FOOTER / CONNECT
+       FOOTER
     ----------------------------------------- */
 
     .connect {
         padding: 40px 15px;
     }
-
+}
 
 
 /* =========================================================
@@ -1094,8 +1054,8 @@
     .hero-content {
         width: 100%;
         max-width: 600px;
-        padding: 35px 10px 0;
         margin: 0 auto;
+        padding: 35px 10px 0;
         text-align: center;
     }
 
@@ -1210,8 +1170,8 @@
         width: 100%;
         max-width: 650px;
         padding: 40px 15px;
-        text-align: center;
         box-sizing: border-box;
+        text-align: center;
     }
 
     .mixedmedia-own h2 {
@@ -1225,8 +1185,8 @@
 
     .video-projects {
         width: 100%;
-        padding: 0 15px;
         margin: 0 auto;
+        padding: 0 15px;
         box-sizing: border-box;
     }
 
@@ -1272,7 +1232,7 @@
     .foto1:hover,
     .foto2:hover,
     .portfolio-item a:hover img {
-        transform: none;
         z-index: auto;
+        transform: none;
     }
 }
