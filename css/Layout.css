@@ -454,33 +454,34 @@
    AFBEELDING display
 ========================================================= */
 
-.afbeelding {
-    flex: 1;
-    min-width: 300px;
-}
-
- .afbeelding img {
-    width: 100%;
-    max-width: 400px;
-    object-fit: cover;
-    vertical-align: middle;
-    border-radius: 10px;
-}
-
 .wrapper {
     padding: 50px 15px;
     display: flex;
-    flex-wrap: wrap;
     align-items: center;
-    justify-content: space-around;
-    gap: 20px;
+    justify-content: center;
+    gap: 50px;
+}
+
+.afbeelding {
+    flex: 0 1 400px;
+}
+
+.afbeelding img {
+    width: 100%;
+    max-width: 400px;
+    height: auto;
+    display: block;
+    border-radius: 10px;
 }
 
 .intro {
-    flex: 1;
-    max-width: 600px;
-    
+    flex: 0 1 600px;
 }
+
+.tekst-links {
+    flex-direction: row-reverse;
+}
+
 /* =========================================================
    TEKST LINKS
 ========================================================= */
@@ -968,13 +969,29 @@
        Daarom mag text-align hier center zijn.
     ----------------------------------------- */
 
+
+    .wrapper {
+        flex-direction: column;
+    }
+
+    .tekst-links {
+        flex-direction: column;
+    }
+
+    .afbeelding,
+    .intro {
+        max-width: 100%;
+    }
+}
+
+
      .text-left,
     .text-right {
         width: 100%;
         text-align: center;
         margin: 0;
     }
-}
+
 
     .text-left p {
         padding: 15px 0;
