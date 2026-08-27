@@ -534,6 +534,10 @@
 }
 
 
+.text-wolk {
+    padding: 10px 0px 10px 10px;
+    background-color:var(--blue);
+}
 /* =========================================================
    TABLET
    769px - 1024px
