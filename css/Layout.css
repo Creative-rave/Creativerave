@@ -492,11 +492,12 @@
 .text-left {
     width: 80%;
     max-width: 800px;
-    margin: 0;
-    padding: 25px 0;
+    margin-right:40px;
+    padding: 25px 10px;
     color: var(--white);
     text-align: left;
 }
+
 
 
 /* =========================================================
