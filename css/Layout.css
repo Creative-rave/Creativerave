@@ -451,54 +451,24 @@
 
 
 /* =========================================================
-   AFBEELDING RECHTS
+   AFBEELDING display
 ========================================================= */
 
-.afbeelding-rechts {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    gap: clamp(20px, 4vw, 40px);
-    margin-bottom: 75px;
-}
-
-.afbeelding-rechts img {
-    width: 50%;
-    max-width: 600px;
-    height: auto;
-    border-radius: 10px;
-}
-
-
-/* =========================================================
-   AFBEELDING LINKS
-========================================================= */
-
-.afbeelding-links {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    gap: clamp(20px, 4vw, 40px);
-    margin-bottom: 75px;
-    padding-top: 100px;
-}
-
-.afbeelding-links img {
-    width: 50%;
-    max-width: 600px;
-    height: auto;
-    border-radius: 10px;
+.afbeelding {
+    flex: 1;
+    min-width: 300px;
 }
 
  .afbeelding img {
     width: 100%;
-    max-width: cover;
+    max-width: 400px;
+    object-fit: cover;
     vertical-align: middle;
     border-radius: 10px;
 }
 
 .wrapper {
-    padding: 0px 15px;
+    padding: 50px 15px;
     display: flex;
     flex-wrap: wrap;
     align-items: center;
@@ -617,20 +587,6 @@
         gap: 25px;
     }
 
-
-    /* -----------------------------------------
-       AFBEELDINGEN
-    ----------------------------------------- */
-
-    .afbeelding-rechts,
-    .afbeelding-links {
-        gap: 30px;
-    }
-
-    .afbeelding-rechts img,
-    .afbeelding-links img {
-        max-width: 450px;
-    }
 
 
     /* -----------------------------------------
@@ -1003,22 +959,11 @@
 
 
     /* -----------------------------------------
-       AFBEELDING + TEKST
+        TEKST
        
        ALLEEN MOBIEL
        Daarom mag text-align hier center zijn.
     ----------------------------------------- */
-
-   .afbeelding-rechts,
-    .afbeelding-links {
-        flex-direction: column;
-        align-items: center;
-    }
-
-    .afbeelding-rechts img,
-    .afbeelding-links img {
-        width: 100%;
-    }
 
      .text-left,
     .text-right {
