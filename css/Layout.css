@@ -490,7 +490,25 @@
     border-radius: 10px;
 }
 
+ .afbeelding img {
+    width: 100%;
+    max-width: cover;
+    vertical-align: middle;
+    border-radius: 10px;
+}
 
+.wrapper {
+    padding: 0px 15px;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-around;
+    gap: 20px;
+}
+
+.intro {
+    flex: 1
+}
 /* =========================================================
    TEKST LINKS
 ========================================================= */
