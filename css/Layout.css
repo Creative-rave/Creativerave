@@ -486,8 +486,8 @@
 ========================================================= */
 
 .text-left {
-    width: 50%;
-    max-width: 650px;
+    width: 80%;
+    max-width: 800px;
     margin: 0;
     padding: 25px 0;
     color: var(--white);
