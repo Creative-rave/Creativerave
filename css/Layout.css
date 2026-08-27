@@ -464,12 +464,12 @@
 
 .afbeelding {
     flex: 0 1 400px;
+     border-radius: 10px;
 }
 
 .afbeelding img {
     width: 100%;
     padding: 10px;
-    border-radius: 10px;
     max-width: 400px;
     height: auto;
     display: block;
