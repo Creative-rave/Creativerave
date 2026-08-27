@@ -535,7 +535,8 @@
 
 
 .text-wolk {
-    border-radius: 10px 0px 10px 10px;
+    border-radius: 10px 10px 10px 0px;
+    padding: 20px;
     background-color:var(--blue);
 }
 /* =========================================================
