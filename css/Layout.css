@@ -481,6 +481,11 @@
     flex: 0 1 600px;
 }
 
+.intro p {
+    padding-bottom: 10px;
+}
+
+
 .tekst-links {
     flex-direction: row-reverse;
 }
