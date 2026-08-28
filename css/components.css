@@ -224,8 +224,6 @@
 
     width: min(1100px, 90%);
 
-    margin: clamp(4rem, 8vw, 6rem) auto;
-
     flex-wrap: wrap;
 
     box-sizing: border-box;
