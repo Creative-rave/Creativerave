@@ -451,58 +451,58 @@
 
 
 /* =========================================================
-   AFBEELDING display
+   AFBEELDING RECHTS
 ========================================================= */
 
-.wrapper {
-    padding: 50px 0px;
+.afbeelding-rechts {
     display: flex;
     align-items: center;
-    justify-content: center;
-    gap: 50px;
+    justify-content: space-between;
+    gap: clamp(20px, 4vw, 40px);
+    margin-bottom: 75px;
 }
 
-.afbeelding {
-    flex: 0 1 400px;
-
-}
-
-.afbeelding img {
-    width: 100%;
-    border-radius: 10px;
-    padding: 10px;
-    max-width: 400px;
+.afbeelding-rechts img {
+    width: 50%;
+    max-width: 600px;
     height: auto;
-    display: block;
     border-radius: 10px;
 }
 
-.intro {
-    flex: 0 1 600px;
+
+/* =========================================================
+   AFBEELDING LINKS
+========================================================= */
+
+.afbeelding-links {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: clamp(20px, 4vw, 40px);
+    margin-bottom: 75px;
+    padding-top: 100px;
 }
 
-.intro p {
-    padding-bottom: 10px;
+.afbeelding-links img {
+    width: 50%;
+    max-width: 600px;
+    height: auto;
+    border-radius: 10px;
 }
 
-
-.tekst-links {
-    flex-direction: row-reverse;
-}
 
 /* =========================================================
    TEKST LINKS
 ========================================================= */
 
 .text-left {
-    width: 80%;
-    max-width: 800px;
-    margin-right:40px;
-    padding: 25px 10px;
+    width: 50%;
+    max-width: 650px;
+    margin: 0;
+    padding: 25px 0;
     color: var(--white);
     text-align: left;
 }
-
 
 
 /* =========================================================
@@ -533,7 +533,6 @@
     text-align: right;
 }
 
-
 .text-wolk {
     width: fit-content;
     border-radius: 10px 10px 10px 0px;
@@ -541,6 +540,7 @@
     margin: 25px;
     background-color:var(--blue);
 }
+
 /* =========================================================
    TABLET
    769px - 1024px
@@ -600,6 +600,20 @@
         gap: 25px;
     }
 
+
+    /* -----------------------------------------
+       AFBEELDINGEN
+    ----------------------------------------- */
+
+    .afbeelding-rechts,
+    .afbeelding-links {
+        gap: 30px;
+    }
+
+    .afbeelding-rechts img,
+    .afbeelding-links img {
+        max-width: 450px;
+    }
 
 
     /* -----------------------------------------
@@ -972,27 +986,22 @@
 
 
     /* -----------------------------------------
-        TEKST
+       AFBEELDING + TEKST
        
        ALLEEN MOBIEL
        Daarom mag text-align hier center zijn.
     ----------------------------------------- */
 
-
-    .wrapper {
+   .afbeelding-rechts,
+    .afbeelding-links {
         flex-direction: column;
+        align-items: center;
     }
 
-    .tekst-links {
-        flex-direction: column;
+    .afbeelding-rechts img,
+    .afbeelding-links img {
+        width: 100%;
     }
-
-    .afbeelding,
-    .intro {
-        max-width: 100%;
-    }
-}
-
 
      .text-left,
     .text-right {
@@ -1000,7 +1009,7 @@
         text-align: center;
         margin: 0;
     }
-
+}
 
     .text-left p {
         padding: 15px 0;
