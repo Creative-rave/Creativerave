@@ -223,6 +223,7 @@
     gap: clamp(2rem, 4vw, 4rem);
 
     width: min(1100px, 90%);
+    padding: 55px 0px;
 
     flex-wrap: wrap;
 
@@ -623,6 +624,29 @@
     display: block;
 }
 
+.afbeelding-grid {
+    display: grid;
+    
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+
+    gap: clamp(10px, 2vw, 20px);
+
+    width: 30%;
+}
+
+
+.afbeelding-grid img {
+    width: 100%;
+    height: auto;
+    display: block;
+    border-radius: 10px;
+}
+
+.afbeelding-grid :hover {
+    transform: scale(1.5,1.5);
+    cursor: pointer;
+    border-color: 2px solid #d36e70;
+}
 
 /* =========================================================
    LAPTOP / KLEINERE MONITOR
@@ -717,6 +741,10 @@
 
 
     .video-grid {
+        grid-template-columns: 1fr;
+    }
+
+      .afbeelding-grid {
         grid-template-columns: 1fr;
     }
 
