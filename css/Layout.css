@@ -1003,6 +1003,14 @@
        Daarom mag text-align hier center zijn.
     ----------------------------------------- */
 
+ .content {
+        flex-direction: column;
+        align-items: center;
+        gap: 30px;
+        padding: 30px 15px;
+    }
+
+
    .afbeelding-rechts,
     .afbeelding-links {
         flex-direction: column;
