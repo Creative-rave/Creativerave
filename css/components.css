@@ -636,39 +636,26 @@
 
 .afbeelding-grid {
     display: grid;
-
+    
     grid-template-columns: repeat(2, minmax(0, 1fr));
 
     gap: clamp(10px, 2vw, 20px);
 
-    width: 50%;
-    max-width: 600px;
-
-    margin: 0;
-
-    box-sizing: border-box;
+    width: 30%;
 }
+
 
 .afbeelding-grid img {
     width: 100%;
     height: auto;
-
     display: block;
-
     border-radius: 10px;
-
-    transition: transform 0.3s ease;
 }
 
-
-/* Desktop hover */
-@media (hover: hover) and (pointer: fine) {
-
-    .afbeelding-grid img:hover {
-        transform: scale(1.03);
-        cursor: pointer;
-    }
-
+.afbeelding-grid :hover {
+    transform: scale(1.5,1.5);
+    cursor: pointer;
+    border-color: 2px solid #d36e70;
 }
 
 /* =========================================================
@@ -758,17 +745,18 @@
     }
 
 
+    .videos video {
+        width: 100%;
+    }
+
+
     .video-grid {
         grid-template-columns: 1fr;
-        gap: 15px;
     }
 
-    .video-grid iframe {
-        width: 100%;
-        aspect-ratio: 560 / 315;
+      .afbeelding-grid {
+        grid-template-columns: 1fr;
     }
-
-
 
 
     /* Portfolio */
@@ -812,24 +800,22 @@
         height: 38px;
     }
 
-}
 
-  .afbeelding-grid {
+    .afbeelding-grid {
         width: 100%;
-        max-width: 100%;
-
         grid-template-columns: 1fr;
-
-        gap: 15px;
+        gap: 20px;
     }
-
 
     .afbeelding-grid img {
         width: 100%;
-        height: auto;
+    }
 
+    .afbeelding-grid img:hover {
         transform: none;
     }
+
+}
 
 
 /* =========================================================
@@ -1189,16 +1175,15 @@
 
 
     .video-grid {
-        width: 100%;
         grid-template-columns: 1fr;
+
         gap: 15px;
-        padding: 0;
     }
+
 
     .video-grid iframe {
         width: 100%;
-        max-width: 100%;
-        aspect-ratio: 560 / 315;
+
         height: auto;
     }
 
