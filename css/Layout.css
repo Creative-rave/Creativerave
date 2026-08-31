@@ -449,17 +449,21 @@
     text-align: left;
 }
 
+
 /* =========================================================
-   functionaliteit afbeelding + tekst
-=================================================== */
+   FUNCTIONALITEIT AFBEELDING + TEKST
+========================================================= */
 
 .content {
     display: flex;
-    align-items: flex-start;
+    align-items: center;
     justify-content: space-between;
-    gap: 20px;
-    padding: 25px 0px;
+    gap: clamp(30px, 5vw, 70px);
+    width: 100%;
+    padding: 50px 15px;
+    box-sizing: border-box;
 }
+
 
 /* =========================================================
    AFBEELDING RECHTS
@@ -513,6 +517,7 @@
     padding: 25px 0;
     color: var(--white);
     text-align: left;
+    box-sizing: border-box;
 }
 
 
@@ -523,8 +528,7 @@
 .text-center {
     width: 100%;
     max-width: 650px;
-    margin: 0 auto;
-    margin-bottom: 20px;
+    margin: 0 auto 20px;
     padding: 50px 0 25px;
     color: var(--white);
     text-align: center;
@@ -542,15 +546,17 @@
     padding: 25px 0;
     color: var(--white);
     text-align: right;
+    box-sizing: border-box;
 }
 
 .text-wolk {
     width: fit-content;
-    border-radius: 10px 10px 10px 0px;
-    padding: 10px 20px;
     margin: 25px;
-    background-color:var(--blue);
+    padding: 10px 20px;
+    border-radius: 10px 10px 10px 0;
+    background-color: var(--blue);
 }
+
 
 /* =========================================================
    TABLET
@@ -558,10 +564,6 @@
 ========================================================= */
 
 @media (min-width: 769px) and (max-width: 1024px) {
-
-    /* -----------------------------------------
-       VERSLAG
-    ----------------------------------------- */
 
     .verslag-content {
         flex-direction: column;
@@ -601,20 +603,10 @@
         text-align: center;
     }
 
-
-    /* -----------------------------------------
-       PORTFOLIO
-    ----------------------------------------- */
-
     .portfolio {
         grid-template-columns: repeat(2, 1fr);
         gap: 25px;
     }
-
-
-    /* -----------------------------------------
-       AFBEELDINGEN
-    ----------------------------------------- */
 
     .afbeelding-rechts,
     .afbeelding-links {
@@ -626,11 +618,6 @@
         max-width: 450px;
     }
 
-
-    /* -----------------------------------------
-       VIDEO
-    ----------------------------------------- */
-
     .video-project {
         flex-direction: column;
         gap: 40px;
@@ -640,11 +627,6 @@
         width: 100%;
         max-width: 750px;
     }
-
-
-    /* -----------------------------------------
-       MIXED MEDIA
-    ----------------------------------------- */
 
     .mixedmedia-layout {
         display: flex;
@@ -676,11 +658,6 @@
         text-align: center;
     }
 
-
-    /* -----------------------------------------
-       PROMOTIE
-    ----------------------------------------- */
-
     .borboleta-promotie-content-bg {
         padding: 50px 30px;
     }
@@ -693,11 +670,7 @@
 ========================================================= */
 
 @media (max-width: 768px) {
-
-    /* -----------------------------------------
-       HERO
-    ----------------------------------------- */
-
+    
     .hero-bg .container {
         display: flex;
         justify-content: center;
@@ -728,20 +701,10 @@
         font-size: clamp(36px, 11vw, 60px);
     }
 
-
-    /* -----------------------------------------
-       ABOUT
-    ----------------------------------------- */
-
     .about-content {
         width: 100%;
         max-width: 650px;
     }
-
-
-    /* -----------------------------------------
-       VERSLAG
-    ----------------------------------------- */
 
     .verslag-content {
         flex-direction: column;
@@ -797,21 +760,11 @@
         line-height: 1.6;
     }
 
-
-    /* -----------------------------------------
-       FOTOGRAFIE
-    ----------------------------------------- */
-
     .fotografie-RM,
     .fotografie-own {
         width: 100%;
         padding: 30px 15px;
     }
-
-
-    /* -----------------------------------------
-       GRAFISCH
-    ----------------------------------------- */
 
     .Grafisch-RM {
         width: 100%;
@@ -826,11 +779,6 @@
     .Grafisch-RM p {
         line-height: 1.6;
     }
-
-
-    /* -----------------------------------------
-       VIDEO
-    ----------------------------------------- */
 
     .video-project {
         flex-direction: column;
@@ -861,11 +809,6 @@
         text-align: center;
     }
 
-
-    /* -----------------------------------------
-       BORBOLETA
-    ----------------------------------------- */
-
     .borboleta-intro {
         padding: 60px 15px 30px;
         text-align: center;
@@ -878,11 +821,6 @@
     .hero-borboleta-content h3 {
         padding: 15px;
     }
-
-
-    /* -----------------------------------------
-       PORTFOLIO
-    ----------------------------------------- */
 
     .portfolio {
         grid-template-columns: 1fr;
@@ -914,11 +852,6 @@
         line-height: 1.5;
     }
 
-
-    /* -----------------------------------------
-       PROMOTIE
-    ----------------------------------------- */
-
     .borboleta-promotie-content-bg {
         padding: 40px 20px;
     }
@@ -934,11 +867,6 @@
         padding: 10px 0;
         text-align: center;
     }
-
-
-    /* -----------------------------------------
-       ONTWIKKELING
-    ----------------------------------------- */
 
     .Hero-ontwikkeling-content {
         padding: 15px 10px;
@@ -956,11 +884,6 @@
     .Mijn-ontwikkeling-grafisch p {
         padding-bottom: 10px;
     }
-
-
-    /* -----------------------------------------
-       MIXED MEDIA
-    ----------------------------------------- */
 
     .mixedmedia-layout {
         flex-direction: column;
@@ -995,15 +918,7 @@
         text-align: center;
     }
 
-
-    /* -----------------------------------------
-       AFBEELDING + TEKST
-       
-       ALLEEN MOBIEL
-       Daarom mag text-align hier center zijn.
-    ----------------------------------------- */
-
-   .afbeelding-rechts,
+    .afbeelding-rechts,
     .afbeelding-links {
         flex-direction: column;
         align-items: center;
@@ -1014,13 +929,12 @@
         width: 100%;
     }
 
-     .text-left,
+    .text-left,
     .text-right {
         width: 100%;
-        text-align: center;
         margin: 0;
+        text-align: center;
     }
-}
 
     .text-left p {
         padding: 15px 0;
@@ -1029,27 +943,15 @@
     .text-center {
         width: 100%;
         max-width: 650px;
-        margin: 0 auto;
-        margin-bottom: 20px;
+        margin: 0 auto 20px;
         padding: 30px 15px;
         text-align: center;
     }
 
-   
-
-    .text-right p {
-        padding: 15px 0;
-    }
-
-
-    /* -----------------------------------------
-       FOOTER
-    ----------------------------------------- */
-
     .connect {
         padding: 40px 15px;
     }
-
+}
 
 
 /* =========================================================
@@ -1083,11 +985,6 @@
         padding: 35px 15px;
     }
 
-
-    /* -----------------------------------------
-       VERSLAG
-    ----------------------------------------- */
-
     .verslag-content {
         gap: 30px;
         margin-block: 40px;
@@ -1109,11 +1006,6 @@
         padding: 0 10px;
     }
 
-
-    /* -----------------------------------------
-       VIDEO
-    ----------------------------------------- */
-
     .video-project {
         width: 96%;
         margin: 40px auto;
@@ -1123,11 +1015,6 @@
         gap: 12px;
     }
 
-
-    /* -----------------------------------------
-       PORTFOLIO
-    ----------------------------------------- */
-
     .portfolio {
         gap: 30px;
     }
@@ -1136,11 +1023,6 @@
         max-width: 100%;
     }
 
-
-    /* -----------------------------------------
-       BORBOLETA
-    ----------------------------------------- */
-
     .borboleta-intro {
         padding: 40px 10px 25px;
     }
@@ -1148,11 +1030,6 @@
     .borboleta-promotie-content-bg {
         padding: 30px 15px;
     }
-
-
-    /* -----------------------------------------
-       AFBEELDING + TEKST
-    ----------------------------------------- */
 
     .afbeelding-rechts,
     .afbeelding-links {
@@ -1168,11 +1045,6 @@
     .text-center {
         padding: 25px 10px;
     }
-
-
-    /* -----------------------------------------
-       MIXED MEDIA
-    ----------------------------------------- */
 
     .mixedmedia-own {
         width: 100%;
@@ -1267,7 +1139,6 @@
     margin: 0 auto;
 }
 
-
 .process-page .process-hero h1 {
     max-width: 850px;
     margin: 0 auto;
@@ -1298,7 +1169,6 @@
 .process-section--muted {
     background-color: var(--process-surface);
 }
-
 
 .process-row {
     display: grid;
@@ -1539,8 +1409,12 @@
     box-shadow: 0 22px 55px rgba(0, 0, 0, 0.32);
 }
 
-@media (max-width: 900px) {
 
+/* =========================================================
+   PROCESS TABLET
+========================================================= */
+
+@media (max-width: 900px) {
 
     .process-row,
     .process-row--gallery {
@@ -1566,6 +1440,11 @@
     }
 }
 
+
+/* =========================================================
+   PROCESS MOBIEL
+========================================================= */
+
 @media (max-width: 600px) {
 
     .process-page .process-hero {
@@ -1577,11 +1456,9 @@
         font-size: clamp(38px, 13vw, 58px);
     }
 
-
     .process-section {
         padding: 44px 0;
     }
-
 
     .process-row {
         gap: 24px;
@@ -1625,9 +1502,15 @@
     }
 }
 
+
+/* =========================================================
+   REDUCED MOTION
+========================================================= */
+
 @media (prefers-reduced-motion: reduce) {
 
     .process-gallery a {
         transition: none;
     }
 }
+
