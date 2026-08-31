@@ -636,26 +636,33 @@
 
 .afbeelding-grid {
     display: grid;
-    
     grid-template-columns: repeat(2, minmax(0, 1fr));
-
     gap: clamp(10px, 2vw, 20px);
 
-    width: 30%;
-}
+    width: 100%;
+    max-width: 900px;
 
+    margin: 0 auto;
+    box-sizing: border-box;
+}
 
 .afbeelding-grid img {
     width: 100%;
     height: auto;
     display: block;
+
     border-radius: 10px;
+
+    transition: transform 0.3s ease;
 }
 
-.afbeelding-grid :hover {
-    transform: scale(1.5,1.5);
-    cursor: pointer;
-    border-color: 2px solid #d36e70;
+
+/* Desktop hover */
+@media (hover: hover) and (pointer: fine) {
+    .afbeelding-grid img:hover {
+        transform: scale(1.03);
+        cursor: pointer;
+    }
 }
 
 /* =========================================================
@@ -756,9 +763,6 @@
     }
 
 
-      .afbeelding-grid {
-        grid-template-columns: 1fr;
-    }
 
 
     /* Portfolio */
@@ -1177,6 +1181,21 @@
 
 }
 
+.afbeelding-grid {
+        grid-template-columns: 1fr;
+
+        width: 100%;
+        padding: 0 15px;
+
+        gap: 15px;
+    }
+
+    .afbeelding-grid img {
+        width: 100%;
+        height: auto;
+
+        transform: none;
+    }
 
 /* =========================================================
    EXTRA KLEINE TELEFOONS
