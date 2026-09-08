@@ -443,6 +443,20 @@ p {
 
 
 }
+
+.Meesterwerk-proces-bg {
+    background-image:  linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
+    url(../images/Proces-images/strijkFout-3D.jpeg);
+
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    padding: 100px 20px;
+
+    min-height: 70vh;
+    display: flex;
+    align-items: center;
+}
 /* =========================
    TABLET
 ========================= */
