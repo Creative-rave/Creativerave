@@ -619,6 +619,12 @@
 }
 
 
+.hero-EXPO-content {
+    color: var(--white);
+    text-align: center;
+}
+
+
 /* =========================================================
    TABLET
    769px - 1024px
