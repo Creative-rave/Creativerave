@@ -5,14 +5,13 @@
 .hero-content {
     width: 100%;
     max-width: 600px;
-    padding-top: 100px;
     color: var(--white);
     text-align: right;
 }
 
 .hero-bg .container {
     display: flex;
-    justify-content: flex-end;
+    justify-content: start;
 }
 
 .project-content {
