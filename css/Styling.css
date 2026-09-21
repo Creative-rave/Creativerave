@@ -471,6 +471,60 @@ p {
     display: flex;
     align-items: center;
 }
+
+/* =========================
+   Formulier   
+========================= */
+.contact-container {
+    width: 100%;
+    max-width: 600px;
+    padding: 50px;
+    background-color: var(--gray);
+    border-radius: 10px;
+    margin: 50px auto 0;
+    box-sizing: border-box;
+}
+
+.contact-container h2 {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.contact-container p {
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.form-group {
+    margin-bottom: 15px;
+}
+
+.label {
+    padding-bottom: 5px;
+}
+
+input,
+textarea {
+    width: 100%;
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    font-size: var(--text-P);
+    box-sizing: border-box;
+}
+
+input:focus,
+textarea:focus {
+    outline: none;
+    box-shadow: 0 0 5px var(--pink);
+}
+
+textarea {
+    resize: vertical;
+    min-height: 100px;
+}
+
+
 /* =========================
    TABLET
 ========================= */
@@ -542,7 +596,27 @@ p {
     .fotografie-own-bg {
         padding: 50px 20px;
     }
+
+    .contact-container {
+        width: calc(100% - 30px);
+        padding: 30px 20px;
+        margin: 30px auto 0;
+    }
+
+    .contact-container h2 {
+        margin-bottom: 15px;
+    }
+
+    .contact-container p {
+        margin-bottom: 25px;
+    }
+
+    input,
+    textarea {
+        font-size: 16px;
+    }
 }
+
 
 /* =========================
    TELEFOON

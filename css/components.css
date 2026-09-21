@@ -83,6 +83,10 @@
     color: var(--black);
 }
 
+.btn-submit {
+    background-color: var(--white);
+    color: var(--pink);
+}
 
 .btn:hover {
     transform: scale(1.05);
