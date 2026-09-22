@@ -1273,3 +1273,49 @@
 
 }
 
+
+.nav-footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 30px;
+}
+
+.footer-content {
+    color: var(--white);
+    text-align: center;
+}
+
+.nav-ul-footer {
+    list-style: none;
+    display: flex;
+    align-items: center;
+    gap: 30px;
+    padding: 0 50px;
+}
+
+.nav-ul-footer li {
+    transition: transform 0.2s ease;
+}
+
+.nav-ul-footer li:hover {
+    transform: scale(1.05);
+}
+
+.nav-footer a {
+    text-decoration: none;
+    color: var(--white);
+    font-size: var(--menu);
+    transition: color 0.2s ease;
+}
+
+.nav-footer a:hover {
+    color: var(--white);
+    text-decoration: underline;
+}
+
+.nav a:focus-visible,
+.btn:focus-visible {
+    outline: 3px solid var(--pink);
+    outline-offset: 4px;
+}

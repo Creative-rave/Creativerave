@@ -950,66 +950,136 @@ img {
 }
 
 
-/* =========================================================
-   22. FOOTER
-   ========================================================= */
+/* =========================
+   FOOTER
+========================= */
 
-.footer-bg {
-    background-color: var(--black);
-    padding: 60px 20px;
-    margin-top: 30px;
+.footer {
+    width: 100%;
+    background-color: var(--darkpink);
+    color: #fff;
+    padding: 70px 0 30px;
+      backdrop-filter: blur(2px);
+    box-shadow: inset 0 0 8px 1px var(--pink);
 }
 
-.nav-footer {
-    display: flex;
-    justify-content: space-between;
+
+/* Container */
+
+.footer .container {
+    width: 90%;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+
+/* =========================
+   FOOTER MAIN
+========================= */
+
+.footer-main {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
     align-items: center;
-    gap: 30px;
+    gap: 40px;
 }
 
-.footer-content {
-    color: var(--white);
+
+/* =========================
+   NAVIGATIE
+========================= */
+
+.footer-navigation {
+    text-align: left;
+}
+
+.footer-navigation h4,
+.contact-me h4 {
+    margin-bottom: 20px;
+    font-family: "Lato-Bold", sans-serif;
+    font-size: 18px;
+}
+
+
+.footer-navigation ul {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+
+.footer-navigation a {
+    color: #fff;
+    text-decoration: none;
+    font-family: "Lato-Regular", sans-serif;
+    font-size: 16px;
+
+    transition: color 0.3s ease;
+}
+
+
+.footer-navigation a:hover {
+    color: #d36e70;
+}
+
+
+/* =========================
+   LOGO
+========================= */
+
+.footer-logo {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+.logo-big {
+    width: 140px;
+    max-width: 100%;
+    height: auto;
+    display: block;
+}
+
+
+/* =========================
+   CONTACT / INFORMATIE
+========================= */
+
+.contact-me {
+    text-align: right;
+}
+
+
+.contact-me p {
+    margin-bottom: 10px;
+    font-family: "Lato-Regular", sans-serif;
+    font-size: 16px;
+    line-height: 1.6;
+}
+
+
+/* =========================
+   FOOTER BOTTOM
+========================= */
+
+.footer-bottom {
+    margin-top: 60px;
+    padding-top: 25px;
+
+    border-top: 1px solid rgba(255, 255, 255, 0.2);
+
     text-align: center;
 }
 
-.nav-ul-footer {
-    list-style: none;
-    display: flex;
-    align-items: center;
-    gap: 30px;
-    padding: 0 50px;
-}
 
-.nav-ul-footer li {
-    transition: transform 0.2s ease;
-}
+.footer-bottom p {
+    margin: 0;
 
-.nav-ul-footer li:hover {
-    transform: scale(1.05);
-}
-
-.nav-footer a {
-    text-decoration: none;
-    color: var(--white);
-    font-size: var(--menu);
-    transition: color 0.2s ease;
-}
-
-.nav-footer a:hover {
-    color: var(--white);
-    text-decoration: underline;
-}
-
-.nav a:focus-visible,
-.btn:focus-visible {
-    outline: 3px solid var(--pink);
-    outline-offset: 4px;
-}
-
-.logo-big {
-    width: 120px;
-    max-width: 100%;
-    display: block;
+    font-family: "Lato-Regular", sans-serif;
+    font-size: 14px;
+    line-height: 1.5;
 }
 
 .connect {
@@ -1586,6 +1656,41 @@ img {
         padding: 10px 18px;
         font-size: 15px;
     }
+
+       .footer {
+        padding: 55px 0 25px;
+    }
+
+    .footer-main {
+        grid-template-columns: 1fr 1fr;
+
+        grid-template-areas:
+            "logo logo"
+            "navigation contact";
+
+        gap: 40px 30px;
+    }
+
+
+    .footer-logo {
+        grid-area: logo;
+    }
+
+    .footer-navigation {
+        grid-area: navigation;
+    }
+
+    .contact-me {
+        grid-area: contact;
+    }
+
+    .contact-me {
+        text-align: right;
+    }
+
+    .logo-big {
+        width: 120px;
+    }
 }
 
 
@@ -1687,6 +1792,60 @@ img {
     .btn {
         padding: 10px 18px;
         font-size: 15px;
+    }
+
+     .footer {
+        padding: 45px 0 25px;
+    }
+
+
+    .footer-main {
+        display: flex;
+
+        flex-direction: column;
+
+        gap: 35px;
+
+        text-align: center;
+    }
+
+
+    .footer-logo {
+        order: 1;
+    }
+
+
+    .footer-navigation {
+        order: 2;
+
+        text-align: center;
+    }
+
+
+    .contact-me {
+        order: 3;
+
+        text-align: center;
+    }
+
+
+    .footer-navigation ul {
+        align-items: center;
+    }
+
+
+    .logo-big {
+        width: 110px;
+    }
+
+
+    .footer-bottom {
+        margin-top: 40px;
+    }
+
+
+    .footer-bottom p {
+        font-size: 13px;
     }
 
     /* =====================================================
