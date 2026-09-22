@@ -139,6 +139,11 @@ img {
     color: var(--pink);
 }
 
+.a-contact {
+    text-decoration: none;
+    color: var(--white);
+}
+
 
 /* =========================================================
    7. CONTAINER
@@ -202,7 +207,7 @@ img {
 
 .nav a {
     text-decoration: none;
-    color: var(--white);
+    color: var(--pink);
     font-size: var(--menu);
     transition: color 0.2s ease;
 }
