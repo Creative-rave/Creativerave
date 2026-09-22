@@ -240,7 +240,7 @@ img {
     transform: scale(1.05);
     background-color: #592f33;
     color:#fff;
-    border-color: 2px solid var(--pink);
+    border: 2px solid var(--pink);
 }
 
 .btn-white {
@@ -252,7 +252,7 @@ img {
     transform: scale(1.05);
     background-color: #ffffffb0;
     color: var(--white);
-    border-color: 2px solid #fff;
+    border: 2px solid #fff;
 }
 
 .btn-submit {
@@ -264,7 +264,7 @@ img {
     transform: scale(1.05);
     background-color: #ffffffb0;
     color: var(--white);
-    border-color: 2px solid #fff;
+    border: 2px solid #fff;
 }
 
 
