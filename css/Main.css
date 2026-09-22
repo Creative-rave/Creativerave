@@ -207,7 +207,7 @@ img {
 
 .nav a {
     text-decoration: none;
-    color: var(--pink);
+    color: var(--white);
     font-size: var(--menu);
     transition: color 0.2s ease;
 }
