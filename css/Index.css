@@ -1,0 +1,62 @@
+.Home-about-bg {
+    background-image:
+        linear-gradient(rgba(0, 0, 0, 0.75), rgba(0, 0, 0, 0.75)),
+        url(../images/shooting_badkamer.jpg);
+
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+
+    padding: 50px 20px;
+    border-radius: 25px;
+    margin: 50px auto;
+    width: 90%;
+    max-width: 1400px;
+}
+
+.Home-about-bg .container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 50px;
+}
+
+.Home-about-content {
+    flex: 1;
+}
+
+.Home-about-image {
+    flex: 1;
+    width: 100%;
+    max-width: 600px;
+}
+
+.Home-about-image img {
+    width: 100%;
+    height: auto;
+    display: block;
+    border-radius: 10px;
+}
+
+
+@media (max-width: 768px) {
+ /* About */
+    .Home-about-bg {
+        width: 92%;
+        margin: 30px auto;
+        padding: 40px 20px;
+        border-radius: 20px;
+    }
+
+    .Home-about-bg .container {
+        flex-direction: column;
+        text-align: center;
+        gap: 30px;
+    }
+
+    .Home-about-content,
+    .Home-about-image {
+        width: 100%;
+        max-width: 600px;
+    }
+}

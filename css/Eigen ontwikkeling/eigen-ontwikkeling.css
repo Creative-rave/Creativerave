@@ -1,0 +1,117 @@
+
+.Hero-ontwikkeling-bg {
+    background-image:
+        linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
+        url(../../images/shooting.jpg);
+
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+
+    min-height: 70vh;
+    display: flex;
+    align-items: center;
+    padding: 100px 20px;
+    text-align: center;
+}
+
+.fotografie-own-bg { 
+    background-image: linear-gradient( rgba(0, 0, 0, 0.75), rgba(0, 0, 0, 0.75) ), url("../images/Shoot-bos.jpg"); 
+    background-position: center; 
+    background-repeat: no-repeat; 
+    background-size: cover; 
+    padding: 60px 20px; } 
+    
+.fotografie-own { 
+    width: 100%; 
+    max-width: 1000px; 
+    height: auto; 
+    margin: auto; 
+    padding: 25px; 
+    color: var(--white); 
+    line-height: 1.8; 
+    text-align: center; }
+
+.mixedmedia-own-bg { 
+    background-color: var(--gray); 
+    padding: 25px 20px; } 
+
+
+.mixedmedia-own { 
+    flex: 1; 
+    width: 100%; 
+    max-width: 600px; 
+    padding: 50px 0; 
+    color: var(--white); 
+    line-height: 1.8; 
+    text-align: left; }
+
+.Mijn-ontwikkeling-grafisch p {
+    padding-bottom: 10px; }
+
+
+
+@media (min-width: 769px) and (max-width: 1024px){ 
+    .mixedmedia-own { max-width: 450px; }
+}
+
+@media (max-width: 768px) {
+    .Hero-ontwikkeling-bg { 
+        min-height: 60vh; 
+        padding: 80px 20px; } 
+    .Hero-ontwikkeling-content { 
+        width: 100%; 
+        padding: 10px; } 
+    .Hero-ontwikkeling-content h2 { 
+        padding: 20px 10px; } 
+        
+    .Mijn-ontwikkeling-grafisch { 
+        width: 100%; 
+        text-align: center; } 
+        
+    .fotografie-own-bg { 
+        padding: 50px 20px; } 
+        
+    .fotografie-own { 
+        width: 100%; 
+        max-width: 700px; 
+        padding: 25px 20px; } 
+        
+    .mixedmedia-own-bg { 
+        padding: 50px 20px; } 
+    
+    .mixedmedia-own { 
+        width: 100%; 
+        max-width: 650px; 
+        padding: 30px 20px; 
+        line-height: 1.6; 
+        text-align: center; }
+    }
+
+   @media (max-width: 480px) {
+     
+    .Hero-ontwikkeling-bg {
+         min-height: 55vh; 
+         padding: 70px 15px; } 
+         
+    .Hero-ontwikkeling-content { 
+        padding: 10px 5px; }
+    
+    .Hero-ontwikkeling-content h2 { 
+        padding: 15px 5px; 
+        line-height: 1.2; } 
+    
+    .fotografie-own-bg { 
+        padding: 40px 15px; } 
+        
+    .fotografie-own { 
+        padding: 20px 10px; 
+        line-height: 1.6; } 
+    
+    .mixedmedia-own-bg { 
+        padding: 40px 15px; } 
+        
+    .mixedmedia-own { 
+        padding: 25px 10px; 
+        line-height: 1.6; } 
+    }

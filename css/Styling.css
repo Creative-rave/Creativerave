@@ -157,11 +157,6 @@ p {
 ========================= */
 
 .hero-bg {
-    background-image: url(../images/Grid_activity-Me.png);
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
-    min-height: 70vh;
     display: flex;
     align-items: center;
     padding: 100px 20px;
@@ -425,7 +420,7 @@ p {
 
 .reuse-bg {
     padding: 50px 0px;
-    background-color: #333;
+    background-color:var(--process-surface)
 }
 
 .reuse-bg-plain {
@@ -440,7 +435,6 @@ p {
     background-repeat: no-repeat;
     background-size: cover;
     padding: 100px 20px;
-
 
 }
 
