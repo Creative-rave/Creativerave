@@ -350,8 +350,16 @@
 
     padding: 80px 0;
 
-    background-color: var(--process-surface);
+    background-image:  
+        linear-gradient(
+            rgba(0, 0, 0, 0.55),
+            rgba(0, 0, 0, 0.55) )
+            ,url(../../images/muziek&literatuur-fokkert.jpg);
+            background-repeat: no-repeat;
+            background-position: center;
+            background-size: cover;
 }
+
 
 
 .borboleta-container-promotie {
