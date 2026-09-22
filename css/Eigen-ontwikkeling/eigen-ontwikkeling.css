@@ -16,7 +16,7 @@
 }
 
 .fotografie-own-bg { 
-    background-image: linear-gradient( rgba(0, 0, 0, 0.75), rgba(0, 0, 0, 0.75) ), url("../images/Shoot-bos.jpg"); 
+    background-image: linear-gradient( rgba(0, 0, 0, 0.75), rgba(0, 0, 0, 0.75) ), url("../../images/Shoot-bos.jpg"); 
     background-position: center; 
     background-repeat: no-repeat; 
     background-size: cover; 
