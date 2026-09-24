@@ -1294,14 +1294,14 @@ img {
 
 .reuse-bg {
     padding: 50px 0px;
-    background-color:var(--process-surface)
+    background-color:var(--process-surface);
+    backdrop-filter: blur(2px);
+    box-shadow: inset 0 0 8px 2px var(--black)
 }
 
 .reuse-bg-plain {
     padding: 50px 0px;
     border: 1px solid var(--darkblue);
-    backdrop-filter: blur(2px);
-    box-shadow: inset 0 0 8px 2px var(--black);
 }
 
 /* =========================================================

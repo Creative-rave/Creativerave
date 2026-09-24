@@ -13,6 +13,9 @@
     align-items: center;
     padding: 100px 20px;
     text-align: center;
+
+    backdrop-filter: blur(2px);
+    box-shadow: inset 0 0 8px 2px var(--black)
 }
 
 .fotografie-own-bg { 
