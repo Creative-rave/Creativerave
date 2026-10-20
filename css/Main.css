@@ -411,6 +411,39 @@ img {
     padding-right: 50px;
 }
 
+/* =========================================================
+   8. PROCES LIJST
+========================================================= */
+
+.process-list {
+    display: grid;
+
+    margin-top: 16px;
+
+    gap: 10px;
+
+    list-style: none;
+}
+
+
+.process-list li {
+    position: relative;
+    padding-left: 26px;
+    color: rgba(255, 255, 255, 0.9);
+    font-size: var(--text-P);
+    line-height: 1.5;
+}
+
+
+.process-list li::before {
+    position: absolute;
+    top: 0.68em;
+    left: 0;
+    width: 10px;
+    height: 2px;
+    background-color: var(--pink);
+    content: "";
+}
 
 /* =========================================================
    14. RESPONSIVE AFBEELDINGEN

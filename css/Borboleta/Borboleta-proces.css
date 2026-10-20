@@ -96,8 +96,7 @@
 
 
 .process-section--muted {
-    background-color: var(--process-surface);
-    
+    background-color: var(--process-surface); 
     border: 1px solid var(--darkblue);
     backdrop-filter: blur(2px);
     box-shadow: inset 0 0 8px 2px var(--black);
@@ -182,49 +181,6 @@
 .process-copy p + p {
     margin-top: 14px;
 }
-
-
-/* =========================================================
-   8. PROCES LIJST
-========================================================= */
-
-.process-list {
-    display: grid;
-
-    margin-top: 16px;
-
-    gap: 10px;
-
-    list-style: none;
-}
-
-
-.process-list li {
-    position: relative;
-
-    padding-left: 26px;
-
-    color: rgba(255, 255, 255, 0.9);
-
-    font-size: var(--text-P);
-    line-height: 1.5;
-}
-
-
-.process-list li::before {
-    position: absolute;
-
-    top: 0.68em;
-    left: 0;
-
-    width: 10px;
-    height: 2px;
-
-    background-color: var(--pink);
-
-    content: "";
-}
-
 
 /* =========================================================
    9. PROCES MEDIA
