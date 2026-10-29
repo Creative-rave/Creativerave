@@ -2017,3 +2017,30 @@ img {
         padding: 18px 12px;
     }
 }
+
+/*==
+Javascript x CSS
+==*/
+
+/* Scrollanimatie voor geselecteerde onderdelen */
+html.js-enabled .reveal {
+    opacity: 0;
+    transform: translateY(18px);
+    transition:
+        opacity 700ms ease,
+        transform 700ms ease;
+}
+
+html.js-enabled .reveal.is-visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* Respecteer de voorkeur voor minder beweging */
+@media (prefers-reduced-motion: reduce) {
+    html.js-enabled .reveal {
+        opacity: 1;
+        transform: none;
+        transition: none;
+    }
+}
