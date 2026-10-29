@@ -2023,24 +2023,26 @@ Javascript x CSS
 ==*/
 
 /* Scrollanimatie voor geselecteerde onderdelen */
+/* Beginpositie van de scrollanimatie */
 html.js-enabled .reveal {
     opacity: 0;
-    transform: translateY(18px);
+    translate: 0 18px;
     transition:
         opacity 700ms ease,
-        transform 700ms ease;
+        translate 700ms ease;
 }
 
+/* Kaart verschijnt tijdens het scrollen */
 html.js-enabled .reveal.is-visible {
     opacity: 1;
-    transform: translateY(0);
+    translate: 0 0;
 }
 
 /* Respecteer de voorkeur voor minder beweging */
 @media (prefers-reduced-motion: reduce) {
     html.js-enabled .reveal {
         opacity: 1;
-        transform: none;
+        translate: none;
         transition: none;
     }
 }
