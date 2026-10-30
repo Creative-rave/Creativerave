@@ -2039,9 +2039,8 @@ html.js-enabled .reveal.is-visible {
 
 /* Respecteer de voorkeur voor minder beweging */
 @media (prefers-reduced-motion: reduce) {
-    html.js-enabled .reveal {
-        opacity: 1;
-        translate: none;
-        transition: none;
+    html.js-enabled .reveal-fade {
+        opacity: 0;
     }
 }
+
