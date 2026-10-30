@@ -1,19 +1,17 @@
-// Zoek het formulier
 const contactForm = document.querySelector("#contact-form");
 
-// Luister naar het verzenden van het formulier
 contactForm.addEventListener("submit", function(event) {
-
-    // Voorkom dat het formulier direct wordt verzonden
     event.preventDefault();
 
-    // Zoek het e-mailveld
+    const nameInput = document.querySelector("#name");
     const emailInput = document.querySelector("#email");
+    const messageInput = document.querySelector("#message");
 
-    // Lees het ingevulde e-mailadres uit
+    const nameValue = nameInput.value;
     const emailValue = emailInput.value;
+    const messageValue = messageInput.value;
 
-    // Toon het e-mailadres in de console
+    console.log(nameValue);
     console.log(emailValue);
-
+    console.log(messageValue);
 });
